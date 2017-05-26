@@ -7,7 +7,9 @@
   <body>
     <header class="page-header">
       <h1 class="page-header__title">Магазин игрушек и предметов интерьера «Мишка»</h1> <!-- Спрячем -->
-      <div class="page-header__logo"><img src="http://placehold.it/86x35" alt="Магазин Мишка" width="86" height="35"></div>
+      <div class="page-header__logo logo">
+      <a class="logo__link"><img src="http://placehold.it/86x35" alt="Магазин «Мишка»" width="86" height="35"></a>
+      </div>
       <nav class="main-nav">
         <span class="main-nav__toogler"></span>
         <div class="main-nav__wrapper">
@@ -88,8 +90,8 @@
             </blockquote>
           </div>
           <div class="reviews__pagination">
-            <button class="reviews__button reviews__button_prew btn" type="button" >Предыдущий отзыв</button>
-            <button class="reviews__button reviews__button_next btn" type="button" >Следующий отзыв</button>
+            <button class="reviews__btn reviews__btn_prew btn" type="button" >Предыдущий отзыв</button>
+            <button class="reviews__btn reviews__btn_next btn" type="button" >Следующий отзыв</button>
           </div>
           <a href="#" class="reviews__write-btn btn">Написать</a>
         </div>
@@ -134,7 +136,7 @@
     <div class="modal-order">
       <h2 class="modal-order__title">Добавить в корзину</h2>
       <form  class="modal-order__form modal-order-form" action="https://echo.htmlacademy.ru" method="post" >
-        <fieldset class="modal-order-form__size">
+        <fieldset class="modal-order-form__fieldset">
           <legend class="modal-order-form__legend">Выберите размер:</legend>
           <label class="modal-order-form__label-btn btn" for="size-s">
             <input type="radio" name="size" value="s" id="size-s">
@@ -147,7 +149,7 @@
             L
           </label>
         </fieldset>
-        <button class="modal-order__submit btn">Добавить</button>
+        <button class="modal-order-form__submit btn">Добавить</button>
       </form>
     </div>
   </body>

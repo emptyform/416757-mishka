@@ -6,7 +6,9 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__logo"><img src="http://placehold.it/86x35" alt="Магазин Мишка" width="86" height="35"></div>
+      <div class="page-header__logo logo">
+      <a href="index.html" class="logo__link"><img src="http://placehold.it/86x35" alt="Магазин «Мишка»" width="86" height="35"></a>
+      </div>
       <nav class="main-nav">
         <span class="main-nav__toogler"></span>
         <div class="main-nav__wrapper">
@@ -55,7 +57,7 @@
             <h2 class="catalog-item__title">Большая корзинка для игрушек</h2>
             <p class="catalog-item__desc">Диаметр 30 см, высота 30 см</p>
             <div class="catalog-item__buy">
-              <p class="catalog-item__price"></p>
+              <p class="catalog-item__price">1 500 руб.</p>
               <a href="" class="catalog-item__buy-btn btn">Заказать</a>
             </div>
           </article>
@@ -84,7 +86,7 @@
     <div class="modal-order">
       <h2 class="modal-order__title">Добавить в корзину</h2>
       <form  class="modal-order__form modal-order-form" action="https://echo.htmlacademy.ru" method="post" >
-        <fieldset class="modal-order-form__size">
+        <fieldset class="modal-order-form__fieldset">
           <legend class="modal-order-form__legend">Выберите размер:</legend>
           <label class="modal-order-form__label-btn btn" for="size-s">
             <input type="radio" name="size" value="s" id="size-s">
@@ -97,7 +99,7 @@
             L
           </label>
         </fieldset>
-        <button class="modal-order__submit btn">Добавить</button>
+        <button class="modal-order-form__submit btn">Добавить</button>
       </form>
     </div>
   </body>
