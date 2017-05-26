@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Мишка</title>
+    <title>Магазин «Мишка»</title>
   </head>
   <body>
     <header class="page-header">
@@ -28,7 +28,7 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main class="page-main">
       <section class="catalog-preview">
         <h2 class="catalog-preview__title">Милые штуки ручной работы для дома</h2>
         <ul class="catalog-preview__list">
@@ -60,7 +60,7 @@
         </table>
         <div class="featured-item__img"><img src="http://placehold.it/260x315" alt="Вязаные корзинки" width="260" height="315"></div>
         <p class="featured-item__price">Цена: 990 руб.</p>
-        <a href="" class="featured-item__btn btn">Заказать</a>
+        <a href="" class="featured-item__buy-btn btn">Заказать</a>
       </section>
       <section class="about">
         <h2 class="about__title">Коротко о нас:</h2>
@@ -115,40 +115,41 @@
         </a>
       </section>
       <section class="feedback">
-        <a href="#" class="feedback__btn btn">Напишите нам</a>
+        <a href="#" class="feedback__write-btn btn">Напишите нам</a>
       </section>
-      <section class="page-footer">
-        <p class="page-footer__socials">
-          <span class="social-links">
-            <a href="#" class="social-link social-link_insta">Наш Instagram</a>
-            <a href="#" class="social-link social-link_fb">Наш Facebook</a>
-            <a href="#" class="social-link social-link_tw">Наш Twitter</a>
-          </span>
-        </p>
-        <p class="page-footer__copyright">
-          Разработано
-          <a href="#" class="page-footer__copyright-link">HTML Academy</a>
-        </p>
-      </section>
-      <div class="modal-order">
-        <h2 class="modal-order__title">Добавить в корзину</h2>
-        <form  class="modal-order__features modal-order-features" action="https://echo.htmlacademy.ru" method="post" >
-          <fieldset class="modal-order-features__size">
-            <legend class="modal-order-features__title">Выберите размер:</legend>
-            <label class="modal-order-features__label-btn btn" for="size-s">
-              <input type="radio" name="size" value="s" id="size-s">
-              S
-            </label>
-            <label class="modal-order-features__label-btn btn" for="size-m"><input type="radio" name="size" value="m" id="size-m">
-              M
-            </label>
-            <label class="modal-order-features__label-btn btn" for="size-l"><input type="radio" name="size" value="l" id="size-l">
-              L
-            </label>
-          </fieldset>
-          <button class="modal-order__submit btn">Добавить</button>
-        </form>
-      </div>
     </main>
+    <footer class="page-footer">
+      <p class="page-footer__socials">
+        <span class="social-links">
+          <a href="#" class="social-link social-link_insta">Наш Instagram</a>
+          <a href="#" class="social-link social-link_fb">Наш Facebook</a>
+          <a href="#" class="social-link social-link_tw">Наш Twitter</a>
+        </span>
+      </p>
+      <p class="page-footer__copyright">
+        Разработано
+        <a href="#" class="page-footer__copyright-link">HTML Academy</a>
+      </p>
+    </footer>
+    <div class="modal-order">
+      <h2 class="modal-order__title">Добавить в корзину</h2>
+      <form  class="modal-order__form modal-order-form" action="https://echo.htmlacademy.ru" method="post" >
+        <fieldset class="modal-order-form__size">
+          <legend class="modal-order-form__legend">Выберите размер:</legend>
+          <label class="modal-order-form__label-btn btn" for="size-s">
+            <input type="radio" name="size" value="s" id="size-s">
+            S
+          </label>
+          <label class="modal-order-form__label-btn btn" for="size-m"><input type="radio" name="size" value="m" id="size-m">
+            M
+          </label>
+          <label class="modal-order-form__label-btn btn" for="size-l"><input type="radio" name="size" value="l" id="size-l">
+            L
+          </label>
+        </fieldset>
+        <button class="modal-order__submit btn">Добавить</button>
+      </form>
+    </div>
   </body>
 </html>
+
