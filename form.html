@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Вязание на заказ</title>
   </head>
-  <body>
+  <body class="page-body">
     <header class="page-header">
       <div class="wrapper">
         <div class="page-header__logo">
@@ -34,8 +34,10 @@
     </header>
     <main>
       <section class="custom-order">
-        <div class="wrapper">
+        <div class="wrapper wrapper--no-padding">
           <h1 class="custom-order__title">Вязание на заказ</h1>
+        </div>
+        <div class="wrapper">
           <p class="custom-order__desc">Мы будем рады воплотить в жизнь ваши пожелания!
           Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
           <form class="custom-order-form" action="https://echo.htmlacademy.ru" method="post">
@@ -117,7 +119,7 @@
 
             <fieldset class="custom-order-form__fieldset">
               <legend class="custom-order-form__legend">Доп</legend>
-              <textarea name="additional" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              <textarea class="custom-order-form__textarea" name="additional" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </fieldset>
 
             <p class="custom-order-form__note">
