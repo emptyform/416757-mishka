@@ -421,6 +421,9 @@ img {
   color: #444444;
   background-color: #ffffff;
 }
+a {
+  text-decoration: none;
+}
 .page-header {
   width: 100%;
   min-height: 79px;
@@ -821,7 +824,4 @@ img {
   font-family: "Open Sans", "Arial", sans-serif;
   color: #444444;
   margin: 0;
-}
-a {
-  text-decoration: none;
 }
