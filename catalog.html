@@ -2,37 +2,42 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>Каталог товаров</title>
   </head>
-  <body>
+  <body class="page-body">
     <header class="page-header">
-      <div class="page-header__logo">
-      <a href="index.html" class="page-header__logo-link"><img src="http://placehold.it/86x35" alt="Магазин «Мишка»" width="86" height="35"></a>
-      </div>
-      <nav class="main-nav">
-        <span class="main-nav__toogler"></span>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link">Каталог товаров</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="form.html" class="main-nav__link">Вязание на заказ</a>
-            </li>
-            <li class="main-nav__item main-nav__item--search">
-              <a href="#" class="main-nav__link">Поиск по сайту</a>
-            </li>
-            <li class="main-nav__item main-nav__item--cart">
-              <a href="#" class="main-nav__link">Корзина: пока пуста</a>
-            </li>
-          </ul>
+      <div class="wrapper">
+        <div class="page-header__logo">
+          <a href="index.html" class="page-header__logo-link"><img src="http://placehold.it/86x35" alt="Магазин «Мишка»" width="86" height="35"></a>
         </div>
-      </nav>
+        <nav class="main-nav">
+          <button class="main-nav__toggler"></button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__link">Каталог товаров</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="form.html" class="main-nav__link">Вязание на заказ</a>
+              </li>
+              <li class="main-nav__item main-nav__item--search">
+                <a href="#" class="main-nav__link">Поиск по сайту</a>
+              </li>
+              <li class="main-nav__item main-nav__item--cart">
+                <a href="#" class="main-nav__link">Корзина: пока пуста</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
-    <main class="page-main">
+    <main>
       <section class="catalog">
-        <h1 class="catalog__title">Каталог товаров</h1>
-        <div class="catalog__list">
+        <div class="wrapper wrapper--no-padding">
+          <h1 class="catalog__title">Каталог товаров</h1>
+        </div>
+        <div class="catalog__list wrapper">
           <article class="catalog-item">
             <div class="catalog-item__img"><a href="#" class="catalog-item__link">
               <img src="http://placehold.it/260x195" alt="Зайчик-попрыгайчик">
@@ -70,45 +75,51 @@
         </div>
       </section>
       <section class="production">
-        <h2 class="production__title">Процесс производства</h2>
-        <div class="production__img">
-          <img src="http://placehold.it/260x150" width="260" height="150" alt="Процесс производства">
+        <div class="wrapper">
+          <h2 class="production__title">Процесс производства</h2>
+          <div class="production__img">
+            <img src="http://placehold.it/260x150" width="260" height="150" alt="Процесс производства">
+          </div>
+          <p class="production__desc">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a href="#" class="production__buy-btn btn">Сделать заказ</a>
         </div>
-        <p class="production__desc">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a href="#" class="production__buy-btn btn">Сделать заказ</a>
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__socials">
-        <span class="social-links">
-          <a href="#" class="social-links__item social-links__item--insta">Наш Instagram</a>
-          <a href="#" class="social-links__item social-links__item--fb">Наш Facebook</a>
-          <a href="#" class="social-links__item social-links__item--tw">Наш Twitter</a>
-        </span>
+      <div class="wrapper">
+        <div class="page-footer__socials">
+          <span class="social-links">
+            <a href="#" class="social-links__item social-links__item--insta">Наш Instagram</a>
+            <a href="#" class="social-links__item social-links__item--fb">Наш Facebook</a>
+            <a href="#" class="social-links__item social-links__item--tw">Наш Twitter</a>
+          </span>
+        </div>
+        <p class="page-footer__copyright">
+          Разработано
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-link">HTML Academy</a>
+        </p>
       </div>
-      <p class="page-footer__copyright">
-        Разработано
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-link">HTML Academy</a>
-      </p>
     </footer>
     <div class="modal-order">
-      <h2 class="modal-order__title">Добавить в корзину</h2>
-      <form class="modal-order-form" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="modal-order-form__fieldset">
-          <legend class="modal-order-form__legend">Выберите размер:</legend>
-          <label class="modal-order-form__label-btn btn" for="size-s">
-            <input type="radio" name="size" value="s" id="size-s">
-            S
-          </label>
-          <label class="modal-order-form__label-btn btn" for="size-m"><input type="radio" name="size" value="m" id="size-m">
-            M
-          </label>
-          <label class="modal-order-form__label-btn btn" for="size-l"><input type="radio" name="size" value="l" id="size-l">
-            L
-          </label>
-        </fieldset>
-        <button class="modal-order-form__submit btn" type="submit">Добавить</button>
-      </form>
+      <div class="wrapper">
+        <h2 class="modal-order__title">Добавить в корзину</h2>
+        <form class="modal-order-form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="modal-order-form__fieldset">
+            <legend class="modal-order-form__legend">Выберите размер:</legend>
+            <label class="modal-order-form__label-btn btn" for="size-s">
+              <input type="radio" name="size" value="s" id="size-s">
+              S
+            </label>
+            <label class="modal-order-form__label-btn btn" for="size-m"><input type="radio" name="size" value="m" id="size-m">
+              M
+            </label>
+            <label class="modal-order-form__label-btn btn" for="size-l"><input type="radio" name="size" value="l" id="size-l">
+              L
+            </label>
+          </fieldset>
+          <button class="modal-order-form__submit btn" type="submit">Добавить</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>

@@ -1,0 +1,77 @@
+@font-face {
+  font-weight: 400;
+  font-family: "Open Sans";
+
+  src: url("../fonts/opensans.woff") format("woff"),
+  url("../fonts/opensans.woff2") format("woff2");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "Open Sans";
+
+  src: url("../fonts/opensansbold.woff") format("woff"),
+  url("../fonts/opensansbold.woff2") format("woff2");
+}
+//
+// FONTS VARIABLES
+//
+@font-family: "Open Sans", "Arial", sans-serif;
+//
+@color-1: @color-of-my-dads-heart-when-he-left-our-family;
+@color-2: @x-color-grey;
+@color-3: @x-color-green;
+@color-4: @x-color-white;
+//
+@font-size-xs: 13px;
+@font-size-s: 15px;
+@font-size-m: 17px;
+@font-size-l: 19px;
+@font-size-xl: 27px;
+//
+@line-height-xs: 16px;
+@line-height-s: 18px;
+@line-height-m: 20px;
+@line-height-l: 24px;
+@line-height-xl: 30px;
+//
+// FONTS MIXINS
+//
+.title-font() {
+  font-weight: 700;
+  font-size: @font-size-xl;
+  line-height: @line-height-xl;
+  font-family: @font-family;
+  color: @color-1;
+
+  .text-reset();
+}
+
+.btn-font() {
+  font-weight: 700;
+  font-size: @font-size-m;
+  line-height: @line-height-m;
+  font-family: @font-family;
+  color: @color-2;
+  text-transform: uppercase;
+}
+
+.paragraph-font() {
+  font-weight: 400;
+  font-size: @font-size-s;
+  line-height: @line-height-xl;
+  font-family: @font-family;
+  color: @color-2;
+
+  .text-reset();
+}
+
+.paragraph-font--small() {
+  font-weight: 400;
+  font-size: @font-size-xs;
+  line-height: @line-height-l;
+  font-family: @font-family;
+  color: @color-2;
+
+  .text-reset();
+}
