@@ -8,4 +8,5 @@
 *.sublime*
 css/*.css
 node_modules/
+layout/
 Thumbs.db

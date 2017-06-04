@@ -1,19 +1,22 @@
 .production {
   width: 100%;
 
+  font-family: @font-family;
+
   background-color: @bg-color-1;
 }
 
 .production__title {
+  margin: 0;
+
   font-weight: 700;
   font-size: @font-size-m;
   line-height: @line-height-l;
-  font-family: @font-family;
   color: @color-1;
-
-  .text-reset();
 }
 
 .production__desc {
+  margin: 0;
+
   .paragraph-font--small();
 }

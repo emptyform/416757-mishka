@@ -1,7 +1,6 @@
 
 .page-header {
   width: 100%;
-  min-height: 79px;
 
   font-weight: 700;
   font-size: @font-size-m;
@@ -12,6 +11,24 @@
   background-color: @bg-color-1;
 }
 
+.page-header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 320px;
+
+  margin: 0 auto;
+  padding: 0 30px;
+  @media @tablet-width {
+    width: 768px;
+    padding: 0 50px;
+    min-height: 155px;
+  }
+  @media @desktop-width {
+    width: 1150px;
+    padding: 0 50px;
+  }
+}
+
 .page-header__title {
   .v-hidden();
 }
@@ -19,5 +36,10 @@
 .page-header__logo {
   width: 86px;
   height: 35px;
-  margin: 0 auto;
+  margin: auto;
+  @media @tablet-width {
+    width: 320px;
+    height: 90px;
+    margin: 0;
+  }
 }

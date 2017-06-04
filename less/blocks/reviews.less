@@ -1,34 +1,132 @@
-.about {
+.reviews {
   width: 100%;
+
+  font-family: @font-family;
 
   background-color: @bg-color-1;
 }
 
+.reviews__wrapper {
+  width: 320px;
+  // min-height: 645px; /* для сетки */
+  margin: 0 auto;
+  padding: 20px 30px 15px 30px;
+  @media @tablet-width {
+    min-height: 550px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    width: 768px;
+    padding: 92px 50px 30px 50px;
+  }
+  @media @desktop-width {
+    width: 1150px;
+    padding: 102px 50px 30px 220px;
+  }
+}
+
 .reviews__title {
+  margin: 0;
+  margin-bottom: 25px;
+
   .title-font();
+  @media @tablet-width {
+    order: 0;
+    width: 375px;
+    margin-right: auto;
+    margin-bottom: 49px;
+  }
+}
+
+.reviews__write-btn {
+  @media @tablet-width {
+    width: 175px;
+  }
+  @media @desktop-width {
+    margin-top: 10px;
+  }
+}
+
+.reviews__slider {
+  // min-height: 555px;
+  @media @tablet-width {
+    position: relative;
+
+    order: 2;
+  }
 }
 
 .reviews__item {
-  .text-reset();
+  margin: 0;
+  margin-bottom: 33px;
+  @media @tablet-width {
+    margin-bottom: 0;
+  }
 }
 
 .reviews__item p {
+  margin: 0;
+  margin-bottom: 25px;
+
   .paragraph-font();
+  @media @tablet-width {
+    margin-bottom: 58px;
+  }
+  @media @desktop-width {
+    margin-bottom: 40px;
+  }
 }
 
 .reviews__author-name {
+  display: block;
+
   font-weight: 700;
   font-size: @font-size-m;
   line-height: @line-height-l;
-  font-family: @font-family;
   color: @color-1;
+  font-style: normal;
+  @media @tablet-width {
+    width: 280px;
+    margin-bottom: 3px;
+
+    font-size: 18;
+  }
 }
 
 .reviews__author-nick {
+  display: block;
+
   font-weight: 400;
   font-size: @font-size-m;
   line-height: @line-height-xl;
-  font-family: @font-family;
   color: @color-2;
   font-style: normal;
+  @media @tablet-width {
+    width: 280px;
+  }
+}
+
+.reviews__pagination {
+  display: flex;
+  margin-bottom: 38px;
+  @media @tablet-width {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 180px;
+    margin: 0;
+  }
+}
+
+.reviews__pagination span {
+  .v-hidden();
+}
+
+.reviews__btn {
+  width: 130px;
+  @media @tablet-width {
+    width: 90px;
+  }
 }

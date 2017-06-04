@@ -4,10 +4,108 @@
   line-height: @line-height-l;
   font-family: @font-family;
   color: @color-2;
+  font-style: normal;
+  min-height: 3900px; /* для сетки */
 
-  background-color: @bg-color-1;
+  background: @bg-color-1 url(../layout/mishka-index-mobile.jpg) 50% 0 no-repeat;
+  background-size: 320 auto;
+
+  @media @tablet-width {
+    background: @bg-color-1 url(../layout/mishka-index-tablet.jpg) 50% 0 no-repeat;
+    background-size: 768 auto;
+  }
+
+  @media @desktop-width {
+    background: @bg-color-1 url(../layout/mishka-index-desktop.jpg) 50% 0 no-repeat;
+    background-size: 1250 auto;
+  }
 }
 
 a {
   text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+//
+//
+//
+//
+//
+
+//
+//
+body > *,
+body > * > *,
+body > * > * > *,
+body > * > * > * > *,
+body > * > * > * > * > * {
+  position: relative;
+}
+// body > *::before,
+// body > * > *::before,
+// body > * > * > *::before,
+// body > * > * > * > *::before,
+// body > * > * > * > * > *::before {
+//   content: "." attr(class);
+//   position: absolute;
+//   top: 2px;
+//   left: 2px;
+//   height: 24px;
+//   padding: 2px 5px;
+//   font-weight: bold;
+//   font-size: 16px;
+//   line-height: 24px;
+//   font-family: "Courier New", monotype;
+//   white-space: nowrap;
+// }
+body > * {
+  background: rgba(128, 255, 128, 0.25);
+  background-clip: content-box;
+  outline: 3px solid green;
+  outline-offset: -3px;
+}
+body > *::before {
+  color: white;
+  background: green;
+}
+body > * > * {
+  background: rgba(255, 45, 82, 0.2);
+  background-clip: content-box;
+  outline: 3px solid rgba(255, 45, 82, 0.9);
+  outline-offset: -3px;
+}
+body > * > *::before {
+  color: white;
+  background: #ff2d52;
+}
+body > * > * > * {
+  background: rgba(173, 216, 230, 0.2);
+  background-clip: content-box;
+  outline: 3px solid rgba(173, 216, 230, 0.9);
+  outline-offset: -3px;
+}
+body > * > * > *::before {
+  color: black;
+  background: lightblue;
+}
+body > * > * > * > * {
+  background: rgba(234, 255, 45, 0.2);
+  background-clip: content-box;
+  outline: 3px solid rgba(234, 255, 45, 0.9);
+  outline-offset: -3px;
+}
+body > * > * > * > *::before {
+  color: black;
+  background: #eaff2d;
+}
+body > * > * > * > * > * {
+  outline: 3px solid violet;
+  outline-offset: -3px;
+}
+body > * > * > * > * > *::before {
+  color: black;
+  background: violet;
 }

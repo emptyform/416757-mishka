@@ -15,7 +15,123 @@
 }
 
 .main-nav__list {
-  .list-reset();
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 80px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  @media @tablet-width {
+    min-height: 155px;
+  }
+}
+
+.main-nav__item {
+  display: none;
+  &--index {
+    display: block;
+    width: 86px;
+    height: 35px;
+    margin: auto;
+    @media @tablet-width {
+      order: 0;
+      width: 319px;
+      height: 90px;
+      margin: 0;
+    }
+    @media @desktop-width {
+      display: block;
+      order: 2;
+      width: 150px;
+      height: 90px;
+      margin-right: auto;
+    }
+  }
+  &--search {
+    @media @tablet-width {
+      display: block;
+      order: 1;
+      width: 85px;
+      height: 90px;
+    }
+    @media @desktop-width {
+      display: block;
+      order: 3;
+    }
+  }
+  &--cart {
+    @media @tablet-width {
+      display: block;
+      order: 2;
+      width: 264px;
+      height: 90px;
+    }
+    @media @desktop-width {
+      display: block;
+      order: 4;
+    }
+  }
+  &--catalog {
+    @media @tablet-width {
+      display: block;
+      order: 3;
+      width: 167px;
+      height: 65px;
+    }
+    @media @desktop-width {
+      display: block;
+      order: 0;
+      width: 185px;
+      height: 90px;
+    }
+  }
+  &--custom-order {
+    @media @tablet-width {
+      display: block;
+      order: 4;
+      width: 167px;
+      height: 65px;
+    }
+    @media @desktop-width {
+      display: block;
+      order: 1;
+      width: 225px;
+      height: 90px;
+      margin-right: 45px;
+    }
+  }
+  &--new {
+    display: none;
+    @media @desktop-width {
+      display: block;
+      order: 5;
+      height: 65px;
+      width: 185px;
+    }
+  }
+  &--sale {
+    display: none;
+    @media @desktop-width {
+      display: block;
+      order: 6;
+      height: 65px;
+      width: 185px;
+    }
+  }
+  &--info {
+    display: none;
+    @media @tablet-width {
+      display: block;
+      order: 10;
+      width: 315px;
+      height: 65px;
+      margin-left: auto;
+    }
+    @media @desktop-width {
+      display: block;
+    }
+  }
 }
 
 .main-nav__link {
