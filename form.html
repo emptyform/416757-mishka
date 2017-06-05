@@ -7,37 +7,44 @@
   </head>
   <body class="page-body">
     <header class="page-header">
-      <div class="wrapper">
-        <div class="page-header__logo">
-          <a href="index.html" class="page-header__logo-link"><img src="http://placehold.it/86x35" alt="Магазин «Мишка»" width="86" height="35"></a>
-        </div>
+      <div class="page-header__wrapper">
         <nav class="main-nav">
           <button class="main-nav__toggler"></button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link">Вязание на заказ</a>
-              </li>
-              <li class="main-nav__item main-nav__item_search">
-                <a href="#" class="main-nav__link">Поиск по сайту</a>
-              </li>
-              <li class="main-nav__item main-nav__item--cart">
-                <a href="#" class="main-nav__link">Корзина: пока пуста</a>
-              </li>
-            </ul>
-          </div>
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--index">
+              <!-- <a href="index.html" class="page-header__logo-link"><img src="http://placehold.it/86x35" alt="Магазин «Мишка»" width="86" height="35"></a> -->
+            </li>
+            <li class="main-nav__item main-nav__item--catalog">
+              <!-- <a href="catalog.html" class="main-nav__link">Каталог товаров</a> -->
+            </li>
+            <li class="main-nav__item main-nav__item--custom-order">
+              <!-- <a href="form.html" class="main-nav__link">Вязание на заказ</a> -->
+            </li>
+            <li class="main-nav__item main-nav__item--search">
+              <!-- <a href="#" class="main-nav__link">Поиск по сайту</a> -->
+            </li>
+            <li class="main-nav__item main-nav__item--cart">
+              <!-- <a href="#" class="main-nav__link">Корзина: пока пуста</a> -->
+            </li>
+            <li class="main-nav__item main-nav__item--new">
+              <!-- <a href="#" class="main-nav__link">Поиск по сайту</a> -->
+            </li>
+            <li class="main-nav__item main-nav__item--sale">
+              <!-- <a href="#" class="main-nav__link">Корзина: пока пуста</a> -->
+            </li>
+            <li class="main-nav__item main-nav__item--info">
+
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
     <main>
       <section class="custom-order">
-        <div class="wrapper wrapper--no-padding">
+        <div class="custom-order__wrapper">
           <h1 class="custom-order__title">Вязание на заказ</h1>
         </div>
-        <div class="wrapper">
+        <div class="custom-order__wrapper custom-order__wrapper--content">
           <p class="custom-order__desc">Мы будем рады воплотить в жизнь ваши пожелания!
           Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
           <form class="custom-order-form" action="https://echo.htmlacademy.ru" method="post">
@@ -45,15 +52,15 @@
             <fieldset class="custom-order-form__fieldset">
               <legend class="custom-order-form__legend">Тип</legend>
 
-              <div class="custom-order-form__container">
+              <div class="custom-order-form__container custom-order-form__container--radio">
                 <input class="custom-order-form__radio" type="radio" name="order-type" value="accessory" id="order-type-accessory">
-                <label class="custom-order-form__label" for="order-type-accessory">
+                <label class="custom-order-form__label custom-order-form__label--radio" for="order-type-accessory">
                 Аксессуар для интерьера</label>
               </div>
 
-              <div class="custom-order-form__container">
+              <div class="custom-order-form__container custom-order-form__container--radio">
                 <input class="custom-order-form__radio" type="radio" name="order-type" value="toy" id="order-type-toy">
-                <label class="custom-order-form__label" for="order-type-toy">
+                <label class="custom-order-form__label custom-order-form__label--radio" for="order-type-toy">
                 Детская игрушка</label>
               </div>
             </fieldset>
@@ -61,29 +68,29 @@
             <fieldset class="custom-order-form__fieldset">
               <legend class="custom-order-form__legend">Цвет</legend>
 
-              <div class="custom-order-form__container">
+              <div class="custom-order-form__container custom-order-form__container--checkbox">
                 <input class="custom-order-form__checkbox" type="checkbox" name="order-color-white" id="order-color-white">
-                <label class="custom-order-form__label" for="order-color-white">Белый</label>
+                <label class="custom-order-form__label custom-order-form__label--checkbox" for="order-color-white">Белый</label>
               </div>
-              <div class="custom-order-form__container">
+              <div class="custom-order-form__container custom-order-form__container--checkbox">
                 <input class="custom-order-form__checkbox" type="checkbox" name="order-color-gray" id="order-color-gray">
-                <label class="custom-order-form__label" for="order-color-gray">Серый</label>
+                <label class="custom-order-form__label custom-order-form__label--checkbox" for="order-color-gray">Серый</label>
               </div>
-              <div class="custom-order-form__container">
+              <div class="custom-order-form__container custom-order-form__container--checkbox">
                 <input class="custom-order-form__checkbox" type="checkbox" name="order-color-tiffany" id="order-color-tiffany">
-                <label class="custom-order-form__label" for="order-color-tiffany">«Тиффани»</label>
+                <label class="custom-order-form__label custom-order-form__label--checkbox" for="order-color-tiffany">«Тиффани»</label>
               </div>
-              <div class="custom-order-form__container">
+              <div class="custom-order-form__container custom-order-form__container--checkbox">
                 <input class="custom-order-form__checkbox" type="checkbox" name="order-color-black" id="order-color-black">
-                <label class="custom-order-form__label" for="order-color-black">Черный</label>
+                <label class="custom-order-form__label custom-order-form__label--checkbox" for="order-color-black">Черный</label>
               </div>
-              <div class="custom-order-form__container">
+              <div class="custom-order-form__container custom-order-form__container--checkbox">
                 <input class="custom-order-form__checkbox" type="checkbox" name="order-color-pink" id="order-color-pink">
-                <label class="custom-order-form__label" for="order-color-pink">Розовый</label>
+                <label class="custom-order-form__label custom-order-form__label--checkbox" for="order-color-pink">Розовый</label>
               </div>
-              <div class="custom-order-form__container">
+              <div class="custom-order-form__container custom-order-form__container--checkbox">
                 <input class="custom-order-form__checkbox" type="checkbox" name="order-color-orange" id="order-color-orange">
-                <label class="custom-order-form__label" for="order-color-orange">Оранжевый</label>
+                <label class="custom-order-form__label custom-order-form__label--checkbox" for="order-color-orange">Оранжевый</label>
               </div>
             </fieldset>
 
@@ -130,19 +137,23 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="wrapper">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__logo">
+              <!-- <a class="page-footer__logo-link"><img src="http://placehold.it/86x35" alt="Магазин «Мишка»" width="86" height="35"></a> -->
+        </div>
         <div class="page-footer__socials">
-          <span class="social-links">
-            <a href="#" class="social-links__item social-links__item--insta">Наш Instagram</a>
+          <span class="page-footer__socials-links social-links">
+            <!-- <a href="#" class="social-links__item social-links__item--insta">Наш Instagram</a>
             <a href="#" class="social-links__item social-links__item--fb">Наш Facebook</a>
-            <a href="#" class="social-links__item social-links__item--tw">Наш Twitter</a>
+            <a href="#" class="social-links__item social-links__item--tw">Наш Twitter</a> -->
           </span>
         </div>
         <p class="page-footer__copyright">
           Разработано
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-link">HTML Academy</a>
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-link"><span>HTML Academy</span></a>
         </p>
       </div>
     </footer>
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
   </body>
 </html>

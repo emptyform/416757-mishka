@@ -8,9 +8,12 @@
 
 .custom-order-form__fieldset {
   padding: 0;
+  padding: 23px 0 10px 0;
 
   border: none;
 }
+
+
 
 .custom-order-form__legend {
   font-weight: 700;
@@ -21,10 +24,20 @@
 }
 
 .custom-order-form__label {
+  display: block;
+
   font-weight: 700;
   font-size: @font-size-m;
   line-height: @line-height-s;
   color: @color-1;
+  &--radio {
+    min-height: 61px;
+    padding: 10px 15px 5px 61px;
+  }
+  &--checkbox {
+    min-height: 61px;
+    padding: 10px 15px 5px 61px;
+  }
 }
 
 .custom-order-form ::-webkit-input-placeholder {
@@ -46,4 +59,9 @@
   font-size: 14px;
   line-height: @line-height-xs;
   color: @color-2;
+}
+
+.custom-order-form__radio,
+.custom-order-form__checkbox {
+  .v-hidden();
 }
