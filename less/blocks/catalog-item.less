@@ -1,25 +1,88 @@
 .catalog-item {
-  width: 100%;
+  width: 260px;
+  min-height: 374px;
+  margin-bottom: 30px;
 
   font-family: @font-family;
 
   background-color: @bg-color-1;
+  @media @tablet-width {
+    display: flex;
+    width: 667px;
+    min-height: 334px;
+    margin-bottom: 54px;
+  }
+  @media @desktop-width {
+    min-height: 659px;
+    width: 316px;
+    display: block;
+
+  }
+}
+
+.catalog-item__container {
+  min-height: 179px;
+  padding: 25px 28px 0 28px;
+  @media @tablet-width {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  @media @desktop-width {
+    min-height: 197px;
+    padding-top: 30px;
+  }
 }
 
 .catalog-item__title {
   margin: 0;
+  margin-bottom: 5px;
 
   font-weight: 700;
   font-size: @font-size-m;
   line-height: @line-height-l;
   color: @color-1;
+  @media @tablet-width {
+    font-size: @font-size-l;
+    line-height: @line-height-l;
+  }
+}
+
+.catalog-item__img {
+  width: 260px;
+  height: 195px;
+  @media @tablet-width {
+    flex-shrink: 0;
+    width: 334px;
+    height: 334px;
+  }
+  @media @desktop-width {
+    width: 316px;
+    height: 462px;
+  }
 }
 
 .catalog-item__desc {
+  display: block;
+  margin-bottom: 20px;
+
   font-weight: 400;
   font-size: @font-size-xs;
   line-height: @line-height-xl;
   color: @color-2;
+  @media @tablet-width {
+    margin-bottom: auto;
+
+    font-size: @font-size-m;
+  }
+}
+
+.catalog-item__buy {
+  min-height: 75px;
+  padding: 22px 30px 22px 0;
+  @media @desktop-width {
+    padding-top: 30px;
+  }
 }
 
 .catalog-item__price {
@@ -27,8 +90,15 @@
   font-size: @font-size-s;
   line-height: @line-height-l;
   color: @color-1;
+  @media @tablet-width {
+    font-size: @font-size-m;
+  }
 }
 
 .catalog-item a {
   color: inherit;
+}
+
+.catalog-item__buy-btn {
+  .v-hidden(); /* Временно */
 }

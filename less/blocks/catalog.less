@@ -6,15 +6,52 @@
   background-color: @bg-color-1;
 }
 
+.catalog__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  @media @tablet-width {
+    width: 768px;
+  }
+  @media @desktop-width {
+    width: 1150px;
+  }
+  &--content {
+    padding: 30px 30px 60px 30px;
+    @media @tablet-width {
+      padding: 79px 50px 63px 50px;
+    }
+    @media @desktop-width {
+      padding-top: 122px;
+      padding-bottom: 108px;
+    }
+  }
+}
 
 .catalog__title {
   min-height: 177px;
   margin: 0;
-  padding: 65px 30px 10px 30px;
+  padding: 70px 30px 10px 30px;
 
   text-align: center;
 
   background-color: @bg-color-2;
 
   .title-font();
+  @media @tablet-width {
+    padding-top: 30px;
+    min-height: 160px;
+  }
+  @media @desktop-width {
+    min-height: 190px;
+  }
+}
+
+.catalog__list {
+  margin-bottom: 53px;
+  @media @desktop-width {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 5px;
+    }
 }
