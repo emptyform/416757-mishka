@@ -50,85 +50,88 @@
           Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
           <form class="custom-order-form" action="https://echo.htmlacademy.ru" method="post">
 
-            <fieldset class="custom-order-form__fieldset">
-              <legend class="custom-order-form__legend">Тип</legend>
+            <div class="custom-order-form__fieldset">
+              <h2 class="custom-order-form__legend custom-order-form__legend--radio">Тип</h2>
 
-              <div class="custom-order-form__container custom-order-form__container--radio">
+              <div class="custom-order-form__wrapper">
+                <label class="custom-order-form__label custom-order-form__label--type" for="order-type-accessory">
                 <input class="custom-order-form__radio" type="radio" name="order-type" value="accessory" id="order-type-accessory">
-                <label class="custom-order-form__label custom-order-form__label--radio" for="order-type-accessory">
-                Аксессуар для интерьера</label>
-              </div>
-
-              <div class="custom-order-form__container custom-order-form__container--radio">
+                Аксессуар для интерьера
+                </label>
+                <label class="custom-order-form__label custom-order-form__label--type" for="order-type-toy">
                 <input class="custom-order-form__radio" type="radio" name="order-type" value="toy" id="order-type-toy">
-                <label class="custom-order-form__label custom-order-form__label--radio" for="order-type-toy">
-                Детская игрушка</label>
+                Детская игрушка
+                </label>
               </div>
-            </fieldset>
+            </div>
 
-            <fieldset class="custom-order-form__fieldset">
-              <legend class="custom-order-form__legend">Цвет</legend>
+            <div class="custom-order-form__fieldset">
+              <h2 class="custom-order-form__legend">Цвет</h2>
 
-              <div class="custom-order-form__container custom-order-form__container--checkbox">
-                <input class="custom-order-form__checkbox" type="checkbox" name="order-color-white" id="order-color-white">
-                <label class="custom-order-form__label custom-order-form__label--checkbox" for="order-color-white">Белый</label>
-              </div>
-              <div class="custom-order-form__container custom-order-form__container--checkbox">
-                <input class="custom-order-form__checkbox" type="checkbox" name="order-color-gray" id="order-color-gray">
-                <label class="custom-order-form__label custom-order-form__label--checkbox" for="order-color-gray">Серый</label>
-              </div>
-              <div class="custom-order-form__container custom-order-form__container--checkbox">
-                <input class="custom-order-form__checkbox" type="checkbox" name="order-color-tiffany" id="order-color-tiffany">
-                <label class="custom-order-form__label custom-order-form__label--checkbox" for="order-color-tiffany">«Тиффани»</label>
-              </div>
-              <div class="custom-order-form__container custom-order-form__container--checkbox">
-                <input class="custom-order-form__checkbox" type="checkbox" name="order-color-black" id="order-color-black">
-                <label class="custom-order-form__label custom-order-form__label--checkbox" for="order-color-black">Черный</label>
-              </div>
-              <div class="custom-order-form__container custom-order-form__container--checkbox">
-                <input class="custom-order-form__checkbox" type="checkbox" name="order-color-pink" id="order-color-pink">
-                <label class="custom-order-form__label custom-order-form__label--checkbox" for="order-color-pink">Розовый</label>
-              </div>
-              <div class="custom-order-form__container custom-order-form__container--checkbox">
-                <input class="custom-order-form__checkbox" type="checkbox" name="order-color-orange" id="order-color-orange">
-                <label class="custom-order-form__label custom-order-form__label--checkbox" for="order-color-orange">Оранжевый</label>
-              </div>
-            </fieldset>
+              <div class="custom-order-form__wrapper custom-order-form__wrapper--color">
 
-            <fieldset class="custom-order-form__fieldset">
-              <legend class="custom-order-form__legend">ФИО</legend>
+                <label class="custom-order-form__label custom-order-form__label--color" for="order-color-white">
+                <input class="custom-order-form__checkbox" type="checkbox" name="order-color-white" id="order-color-white">Белый
+                </label>
 
-              <div class="custom-order-form__container">
-                <label class="custom-order-form__label" for="customer-first-name">Имя:</label>
-                <input class="custom-order-form__text" type="text" name="customer-first-name" id="customer-first-name" placeholder="Введите ваше имя*" required>
+                <label class="custom-order-form__label custom-order-form__label--color" for="order-color-gray">
+                <input class="custom-order-form__checkbox" type="checkbox" name="order-color-gray" id="order-color-gray">Серый
+                </label>
+
+                <label class="custom-order-form__label custom-order-form__label--color" for="order-color-tiffany">
+                <input class="custom-order-form__checkbox" type="checkbox" name="order-color-tiffany" id="order-color-tiffany">«Тиффани»
+                </label>
+
+                <label class="custom-order-form__label custom-order-form__label--color" for="order-color-black">
+                <input class="custom-order-form__checkbox" type="checkbox" name="order-color-black" id="order-color-black">Черный
+                </label>
+
+                <label class="custom-order-form__label custom-order-form__label--color" for="order-color-pink">
+                <input class="custom-order-form__checkbox" type="checkbox" name="order-color-pink" id="order-color-pink">Розовый
+                </label>
+
+                <label class="custom-order-form__label custom-order-form__label--color" for="order-color-orange">
+                <input class="custom-order-form__checkbox" type="checkbox" name="order-color-orange" id="order-color-orange">Оранжевый
+                </label>
+              </div>
+            </div>
+
+            <div class="custom-order-form__fieldset custom-order-form__fieldset--name">
+              <h2 class="custom-order-form__legend custom-order-form__legend--name">ФИО</h2>
+
+              <div class="custom-order-form__wrapper custom-order-form__wrapper--name">
+                <div class="custom-order-form__container custom-order-form__container--name">
+                  <label class="custom-order-form__label custom-order-form__label--name" for="customer-first-name">Имя:</label>
+                  <input class="custom-order-form__name" type="text" name="customer-first-name" id="customer-first-name" placeholder="Введите ваше имя*" required>
+                </div>
+
+                <div class="custom-order-form__container custom-order-form__container--name">
+                  <label class="custom-order-form__label  custom-order-form__label--name" for="customer-second-name">Фамилия:</label>
+                  <input class="custom-order-form__name" type="text" name="customer-second-name" id="customer-second-name" placeholder="Укажите фамилию*" required>
+                </div>
+
+                <div class="custom-order-form__container custom-order-form__container--name">
+                  <label class="custom-order-form__label  custom-order-form__label--name" for="customer-patronymic">Отчество:</label>
+                  <input class="custom-order-form__name" type="text" name="customer-patronymic" id="customer-patronymic" placeholder="Отчество, если желаете">
+                </div>
               </div>
 
-              <div class="custom-order-form__container">
-                <label class="custom-order-form__label" for="customer-second-name">Фамилия:</label>
-                <input class="custom-order-form__text" type="text" name="customer-second-name" id="customer-second-name" placeholder="Укажите фамилию*" required>
-              </div>
+            </div>
 
-              <div class="custom-order-form__container">
-                <label class="custom-order-form__label" for="customer-patronymic">Отчество:</label>
-                <input class="custom-order-form__text" type="text" name="customer-patronymic" id="customer-patronymic" placeholder="Отчество, если желаете">
-              </div>
-
-            </fieldset>
-
-            <fieldset class="custom-order-form__fieldset">
-              <legend class="custom-order-form__legend">Тел</legend>
+            <div class="custom-order-form__fieldset custom-order-form__fieldset--phone">
+              <h2 class="custom-order-form__legend custom-order-form__legend--phone">Тел</h2>
               <input class="custom-order-form__phone-number" type="tel" name="customer-phone-number" placeholder="+7 ХХХ ХХ ХХ*" required>
-            </fieldset>
+            </div>
 
-            <fieldset class="custom-order-form__fieldset">
-              <legend class="custom-order-form__legend">E-mail</legend>
+            <div class="custom-order-form__fieldset custom-order-form__fieldset--email">
+              <h2 class="custom-order-form__legend custom-order-form__legend--email">E-mail</h2>
               <input type="email" class="custom-order-form__email" name="customer-email" placeholder="Ваш Email*" required>
-            </fieldset>
+            </div>
 
-            <fieldset class="custom-order-form__fieldset">
-              <legend class="custom-order-form__legend">Доп</legend>
-              <textarea class="custom-order-form__textarea" name="additional" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-            </fieldset>
+            <div class="custom-order-form__fieldset custom-order-form__fieldset--textarea">
+              <h2 class="custom-order-form__legend">Доп</h2>
+              <textarea class="custom-order-form__textarea" name="additional" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </div>
 
             <p class="custom-order-form__note">
             <sup>*</sup>Поля обязательны для заполнения</p>
