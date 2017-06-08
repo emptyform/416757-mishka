@@ -13,10 +13,9 @@
     margin-bottom: 54px;
   }
   @media @desktop-width {
-    min-height: 659px;
-    width: 316px;
     display: block;
-
+    width: 316px;
+    min-height: 659px;
   }
 }
 
@@ -25,12 +24,11 @@
   padding: 25px 28px 0 28px;
   @media @tablet-width {
     display: flex;
-    flex-direction: column;
     flex-grow: 1;
+    flex-direction: column;
   }
   @media @desktop-width {
     min-height: 197px;
-    padding-top: 30px;
   }
 }
 
@@ -73,15 +71,20 @@
   @media @tablet-width {
     margin-bottom: auto;
 
-    font-size: @font-size-m;
+    font-size: @font-size-s;
   }
 }
 
 .catalog-item__buy {
   min-height: 75px;
-  padding: 22px 30px 22px 0;
+  padding: 20px 30px 25px 0;
+  @media @tablet-width {
+    padding-top: 23px;
+    padding-left: 5px;
+  }
   @media @desktop-width {
-    padding-top: 30px;
+    padding-top: 25px;
+    padding-left: 0;
   }
 }
 

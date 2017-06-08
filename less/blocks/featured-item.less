@@ -1,10 +1,15 @@
 .featured-item {
   position: relative;
+
   width: 100%;
 
   font-family: @font-family;
 
   background-color: @bg-color-1;
+  @media @tablet-width {
+    position: relative;
+    bottom: 20px;
+  }
 }
 
 .featured-item__wrapper {
@@ -13,18 +18,22 @@
   margin: 0 auto;
   padding: 30px 30px 40px 30px;
   @media @tablet-width {
+    position: relative;
+
     width: 768px;
-    padding: 60px 50px 30px 50px;
-    min-height: 628px; /* для сетки */
+    min-height: 587px; /* для сетки */
+    padding: 0 50px 75px 50px;
   }
   @media @desktop-width {
     width: 1150px;
-    padding: 137px 50px 85px 222px;
+    padding: 80px 50px 94px 225px;
   }
 }
 
 .featured-item__title {
   margin: 0;
+
+  letter-spacing: -1px;
 
   .title-font();
   @media @tablet-width {
@@ -32,6 +41,9 @@
     margin-bottom: 48px;
   }
   @media @desktop-width {
+    position: relative;
+    z-index: 5;
+
     width: 565px;
   }
 }
@@ -45,18 +57,20 @@
   line-height: @line-height-m;
   color: @color-3;
   text-transform: uppercase;
-
   @media @tablet-width {
     position: absolute;
-    top: 68px;
+    top: 15px;
     right: 53px;
+
     width: 122px;
-    text-align: center;
     margin: 0;
+
+    line-height: 17px;
+    text-align: center;
   }
   @media @desktop-width {
+    top: 95px;
     right: auto;
-    top: 150px;
     left: 70px;
   }
 }
@@ -64,7 +78,7 @@
 .featured-item__desc {
   min-height: 70px; /* для сетки */
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 
   font-weight: 400;
   font-size: @font-size-s;
@@ -72,9 +86,10 @@
   color: @color-2;
   @media @tablet-width {
     width: 291px;
+    margin-bottom: 38px;
+
     font-size: @font-size-m;
     line-height: @line-height-xl;
-    margin-bottom: 38px;
   }
   @media @desktop-width {
     margin-bottom: 49px;
@@ -84,7 +99,7 @@
 .featured-item__stats {
   min-width: 260px;
   min-height: 115px; /* для сетки */
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 
   font-weight: 400;
   font-size: @font-size-s;
@@ -102,19 +117,22 @@
 .featured-item__img {
   width: 260px;
   height: 315px;
-  margin-bottom: 23px;
+  margin-bottom: 25px;
   @media @tablet-width {
     position: absolute;
-    top: 165px;
+    top: 110px;
     right: 50px;
+
     width: 333px;
     height: 404px;
     margin: 0;
   }
   @media @desktop-width {
+    top: 30px;
+    z-index: 0;
+
     width: 525px;
     height: 636px;
-    top: 86px;
   }
 }
 
@@ -131,12 +149,12 @@
   line-height: @line-height-m;
   text-align: center;
   color: @color-2;
-
   @media @tablet-width {
     width: 291px;
+    margin-bottom: 36px;
+
     font-size: @font-size-l;
     line-height: @line-height-l;
-    margin-bottom: 36px;
   }
 }
 

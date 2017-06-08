@@ -7,7 +7,7 @@
   font-family: @font-family;
   color: @color-1;
 
-  background-color: @bg-color-1;
+  background-color: transparent;
 }
 
 .main-nav__toggler {
@@ -36,16 +36,18 @@
     margin: auto;
     @media @tablet-width {
       order: 0;
-      width: 319px;
+      width: 369px;
       height: 90px;
       margin: 0;
+
+      border-right: 1px solid @bg-color-5;
+      border-bottom: 1px solid @bg-color-5;
     }
     @media @desktop-width {
       display: block;
       order: 2;
-      width: 150px;
+      width: 251px;
       height: 90px;
-      margin-right: auto;
     }
   }
   &--search {
@@ -54,6 +56,12 @@
       order: 1;
       width: 85px;
       height: 90px;
+
+      border-right: 1px solid @bg-color-5;
+      border-bottom: 1px solid @bg-color-5;
+      span {
+        .v-hidden();
+      }
     }
     @media @desktop-width {
       display: block;
@@ -64,8 +72,14 @@
     @media @tablet-width {
       display: block;
       order: 2;
-      width: 264px;
+      width: 314px;
       height: 90px;
+      padding-top: 31px;
+      padding-right: 50px;
+
+      text-align: right;
+
+      border-bottom: 1px solid @bg-color-5;
     }
     @media @desktop-width {
       display: block;
@@ -76,14 +90,27 @@
     @media @tablet-width {
       display: block;
       order: 3;
-      width: 167px;
+      width: 217px;
       height: 65px;
+      padding-top: 17px;
+      padding-left: 50px;
+
+      font-size: @font-size-s;
+      line-height: @line-height-l;
+      // background-color: @bg-color-4;
     }
     @media @desktop-width {
       display: block;
       order: 0;
-      width: 185px;
+      width: 235px;
       height: 90px;
+      padding-top: 31px;
+
+      font-size: @font-size-m;
+
+      border-right: 1px solid @bg-color-5;
+      border-bottom: 1px solid @bg-color-5;
+      // background-color: @bg-color-1;
     }
   }
   &--custom-order {
@@ -92,13 +119,24 @@
       order: 4;
       width: 167px;
       height: 65px;
+      padding-top: 16px;
+
+      font-size: @font-size-s;
+      line-height: @line-height-l;
+      // background-color: @bg-color-4;
     }
     @media @desktop-width {
       display: block;
       order: 1;
-      width: 225px;
+      width: 265px;
       height: 90px;
-      margin-right: 45px;
+      padding-top: 31px;
+      padding-left: 36px;
+
+      font-size: @font-size-m;
+
+      border-bottom: 1px solid @bg-color-5;
+      // background-color: @bg-color-1;
     }
   }
   &--new {
@@ -106,8 +144,13 @@
     @media @desktop-width {
       display: block;
       order: 5;
+      width: 235px;
       height: 65px;
-      width: 185px;
+      padding-top: 16px;
+      padding-left: 52px;
+
+      font-size: @font-size-s;
+      // background-color: @bg-color-4;
     }
   }
   &--sale {
@@ -115,21 +158,36 @@
     @media @desktop-width {
       display: block;
       order: 6;
-      height: 65px;
       width: 185px;
+      height: 65px;
+      padding-top: 16px;
+      padding-left: 36px;
+
+      font-size: @font-size-s;
+      // background-color: @bg-color-4;
     }
   }
   &--info {
     display: none;
     @media @tablet-width {
       display: block;
+      flex-grow: 1;
+      flex-shrink: 0;
       order: 10;
       width: 315px;
       height: 65px;
       margin-left: auto;
-    }
-    @media @desktop-width {
-      display: block;
+      padding-top: 15px;
+      padding-right: 50px;
+      padding-left: 48px;
+      padding-left: 50px;
+
+      font-weight: 400;
+      font-size: @font-size-s;
+      line-height: @line-height-l;
+      text-align: right;
+      color: @color-2;
+      // background-color: @bg-color-4;
     }
   }
 }

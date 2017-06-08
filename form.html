@@ -12,28 +12,28 @@
           <button class="main-nav__toggler"></button>
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--index">
-              <!-- <a href="index.html" class="page-header__logo-link"><img src="http://placehold.it/86x35" alt="Магазин «Мишка»" width="86" height="35"></a> -->
+              <!-- <a class="page-header__logo-link"><img src="http://placehold.it/86x35" alt="Магазин «Мишка»" width="86" height="35"></a> -->
             </li>
             <li class="main-nav__item main-nav__item--catalog">
-              <!-- <a href="catalog.html" class="main-nav__link">Каталог товаров</a> -->
+              <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
             </li>
             <li class="main-nav__item main-nav__item--custom-order">
-              <!-- <a href="form.html" class="main-nav__link">Вязание на заказ</a> -->
+              <a href="form.html" class="main-nav__link">Вязание на заказ</a>
             </li>
             <li class="main-nav__item main-nav__item--search">
-              <!-- <a href="#" class="main-nav__link">Поиск по сайту</a> -->
+              <a href="#" class="main-nav__link"><span>Поиск по сайту</span></a>
             </li>
             <li class="main-nav__item main-nav__item--cart">
-              <!-- <a href="#" class="main-nav__link">Корзина: пока пуста</a> -->
+              <a href="#" class="main-nav__link">Корзина: пока пуста</a>
             </li>
             <li class="main-nav__item main-nav__item--new">
-              <!-- <a href="#" class="main-nav__link">Поиск по сайту</a> -->
+              <a href="#" class="main-nav__link">Новые поступления</a>
             </li>
             <li class="main-nav__item main-nav__item--sale">
-              <!-- <a href="#" class="main-nav__link">Корзина: пока пуста</a> -->
+              <a href="#" class="main-nav__link">Распродажа</a>
             </li>
             <li class="main-nav__item main-nav__item--info">
-
+              Бесплатная доставка по России
             </li>
           </ul>
         </nav>
@@ -41,7 +41,7 @@
     </header>
     <main>
       <section class="custom-order">
-        <div class="custom-order__wrapper">
+        <div class="custom-order__wrapper custom-order__wrapper--title">
           <h1 class="custom-order__title">Вязание на заказ</h1>
         </div>
         <div class="custom-order__wrapper custom-order__wrapper--content">
@@ -64,34 +64,36 @@
               </div>
             </div>
 
-            <div class="custom-order-form__fieldset">
-              <h2 class="custom-order-form__legend">Цвет</h2>
+            <div class="custom-order-form__wrapper-decorative">
+              <div class="custom-order-form__fieldset">
+                <h2 class="custom-order-form__legend">Цвет</h2>
 
-              <div class="custom-order-form__wrapper custom-order-form__wrapper--color">
+                <div class="custom-order-form__wrapper custom-order-form__wrapper--color">
 
-                <label class="custom-order-form__label custom-order-form__label--color" for="order-color-white">
-                <input class="custom-order-form__checkbox" type="checkbox" name="order-color-white" id="order-color-white">Белый
-                </label>
+                  <label class="custom-order-form__label custom-order-form__label--color" for="order-color-white">
+                  <input class="custom-order-form__checkbox" type="checkbox" name="order-color-white" id="order-color-white">Белый
+                  </label>
 
-                <label class="custom-order-form__label custom-order-form__label--color" for="order-color-gray">
-                <input class="custom-order-form__checkbox" type="checkbox" name="order-color-gray" id="order-color-gray">Серый
-                </label>
+                  <label class="custom-order-form__label custom-order-form__label--color" for="order-color-gray">
+                  <input class="custom-order-form__checkbox" type="checkbox" name="order-color-gray" id="order-color-gray">Серый
+                  </label>
 
-                <label class="custom-order-form__label custom-order-form__label--color" for="order-color-tiffany">
-                <input class="custom-order-form__checkbox" type="checkbox" name="order-color-tiffany" id="order-color-tiffany">«Тиффани»
-                </label>
+                  <label class="custom-order-form__label custom-order-form__label--color" for="order-color-tiffany">
+                  <input class="custom-order-form__checkbox" type="checkbox" name="order-color-tiffany" id="order-color-tiffany">«Тиффани»
+                  </label>
 
-                <label class="custom-order-form__label custom-order-form__label--color" for="order-color-black">
-                <input class="custom-order-form__checkbox" type="checkbox" name="order-color-black" id="order-color-black">Черный
-                </label>
+                  <label class="custom-order-form__label custom-order-form__label--color" for="order-color-black">
+                  <input class="custom-order-form__checkbox" type="checkbox" name="order-color-black" id="order-color-black">Черный
+                  </label>
 
-                <label class="custom-order-form__label custom-order-form__label--color" for="order-color-pink">
-                <input class="custom-order-form__checkbox" type="checkbox" name="order-color-pink" id="order-color-pink">Розовый
-                </label>
+                  <label class="custom-order-form__label custom-order-form__label--color" for="order-color-pink">
+                  <input class="custom-order-form__checkbox" type="checkbox" name="order-color-pink" id="order-color-pink">Розовый
+                  </label>
 
-                <label class="custom-order-form__label custom-order-form__label--color" for="order-color-orange">
-                <input class="custom-order-form__checkbox" type="checkbox" name="order-color-orange" id="order-color-orange">Оранжевый
-                </label>
+                  <label class="custom-order-form__label custom-order-form__label--color" for="order-color-orange">
+                  <input class="custom-order-form__checkbox" type="checkbox" name="order-color-orange" id="order-color-orange">Оранжевый
+                  </label>
+                </div>
               </div>
             </div>
 
@@ -117,14 +119,18 @@
 
             </div>
 
-            <div class="custom-order-form__fieldset custom-order-form__fieldset--phone">
-              <h2 class="custom-order-form__legend custom-order-form__legend--phone">Тел</h2>
-              <input class="custom-order-form__phone-number" type="tel" name="customer-phone-number" placeholder="+7 ХХХ ХХ ХХ*" required>
+            <div class="custom-order-form__wrapper-decorative">
+              <div class="custom-order-form__fieldset custom-order-form__fieldset--phone">
+                <h2 class="custom-order-form__legend custom-order-form__legend--phone">Тел</h2>
+                <input class="custom-order-form__phone-number" type="tel" name="customer-phone-number" placeholder="+7 ХХХ ХХ ХХ*" required>
+              </div>
             </div>
 
-            <div class="custom-order-form__fieldset custom-order-form__fieldset--email">
-              <h2 class="custom-order-form__legend custom-order-form__legend--email">E-mail</h2>
-              <input type="email" class="custom-order-form__email" name="customer-email" placeholder="Ваш Email*" required>
+            <div class="custom-order-form__wrapper-decorative">
+              <div class="custom-order-form__fieldset custom-order-form__fieldset--email">
+                <h2 class="custom-order-form__legend custom-order-form__legend--email">E-mail</h2>
+                <input type="email" class="custom-order-form__email" name="customer-email" placeholder="Ваш Email*" required>
+              </div>
             </div>
 
             <div class="custom-order-form__fieldset custom-order-form__fieldset--textarea">
@@ -132,9 +138,11 @@
               <textarea class="custom-order-form__textarea" name="additional" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </div>
 
-            <p class="custom-order-form__note">
-            <sup>*</sup>Поля обязательны для заполнения</p>
-            <button class="custom-order__submit-btn btn" type="submit">Отправить заказ</button>
+            <div class="custom-order-form__wrapper-submit">
+              <p class="custom-order-form__note">
+              <sup>*</sup>Поля обязательны для заполнения</p>
+              <button class="custom-order__submit-btn btn" type="submit">Отправить заказ</button>
+            </div>
           </form>
         </div>
       </section>
