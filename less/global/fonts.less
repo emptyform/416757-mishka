@@ -26,14 +26,18 @@
 @font-size-xs: 13px;
 @font-size-s: 15px;
 @font-size-m: 17px;
-@font-size-l: 19px;
+@font-size-l: 20px;
 @font-size-xl: 27px;
+@font-size-xxl: 43px;
+@font-size-3xl: 53px;
 //
 @line-height-xs: 16px;
 @line-height-s: 18px;
 @line-height-m: 20px;
 @line-height-l: 24px;
 @line-height-xl: 30px;
+@line-height-xxl: 50px;
+@line-height-3xl: 57px;
 //
 // FONTS MIXINS
 //
@@ -43,8 +47,17 @@
   line-height: @line-height-xl;
   font-family: @font-family;
   color: @color-1;
+  // letter-spacing: -1px;
 
-  .text-reset();
+  @media @tablet-width {
+    font-size: @font-size-xxl;
+    line-height: @line-height-xxl;
+    letter-spacing: 0;
+  }
+  @media @desktop-width {
+    font-size: @font-size-3xl;
+    line-height: @line-height-3xl;
+  }
 }
 
 .btn-font() {
@@ -62,8 +75,10 @@
   line-height: @line-height-xl;
   font-family: @font-family;
   color: @color-2;
-
-  .text-reset();
+  @media @tablet-width {
+    font-size: @font-size-m;
+    line-height: @line-height-xl;
+  }
 }
 
 .paragraph-font--small() {
@@ -72,6 +87,8 @@
   line-height: @line-height-l;
   font-family: @font-family;
   color: @color-2;
-
-  .text-reset();
+  @media @tablet-width {
+    font-size: @font-size-m;
+    line-height: @line-height-xl;
+  }
 }
