@@ -1,6 +1,6 @@
 .catalog-item {
   width: 260px;
-  min-height: 374px;
+  min-height: 372px;
   margin-bottom: 30px;
 
   font-family: @font-family;
@@ -22,6 +22,7 @@
 .catalog-item__container {
   min-height: 179px;
   padding: 25px 28px 0 28px;
+  border: 1px solid #eeeeee;
   @media @tablet-width {
     display: flex;
     flex-grow: 1;
@@ -49,6 +50,10 @@
 .catalog-item__img {
   width: 260px;
   height: 195px;
+  img {
+    display: block;
+
+  }
   @media @tablet-width {
     flex-shrink: 0;
     width: 334px;
@@ -76,8 +81,9 @@
 }
 
 .catalog-item__buy {
-  min-height: 75px;
+  min-height: 70px;
   padding: 20px 30px 25px 0;
+  border-top: 1px solid #eeeeee;
   @media @tablet-width {
     padding-top: 23px;
     padding-left: 5px;

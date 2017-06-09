@@ -6,10 +6,6 @@
   font-family: @font-family;
 
   background-color: @bg-color-1;
-  @media @tablet-width {
-    position: relative;
-    bottom: 20px;
-  }
 }
 
 .featured-item__wrapper {
@@ -105,6 +101,10 @@
   font-size: @font-size-s;
   line-height: @line-height-m;
   color: @color-2;
+  border-collapse: collapse;
+  tr {
+    border-bottom: 1px solid @bg-color-5;
+  }
   @media @tablet-width {
     width: 291px;
     margin-bottom: 59px;
@@ -151,7 +151,7 @@
   color: @color-2;
   @media @tablet-width {
     width: 291px;
-    margin-bottom: 36px;
+    margin-bottom: 35px;
 
     font-size: @font-size-l;
     line-height: @line-height-l;

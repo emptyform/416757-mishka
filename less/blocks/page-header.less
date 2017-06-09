@@ -9,9 +9,12 @@
   color: @color-1;
 
   background-color: transparent;
+  border-bottom: 1px solid #ededed;
   @media @tablet-width {
+    border: none;
     position: relative;
     z-index: 5;
+    margin-bottom: -65px;
   }
 }
 
@@ -21,10 +24,12 @@
   width: 320px;
   margin: 0 auto;
   padding: 0 30px;
+
   @media @tablet-width {
     width: 768px;
     min-height: 155px;
     padding: 0;
+
   }
   @media @desktop-width {
     width: 1150px;
