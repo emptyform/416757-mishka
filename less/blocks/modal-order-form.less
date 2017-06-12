@@ -6,12 +6,46 @@
   background-color: @bg-color-1;
 }
 
+
+.modal-order-form__fieldset {
+  border: none;
+}
+
 .modal-order-form__legend {
   margin: 0;
+  margin-bottom: 25px;
+
+  text-align: center;
 
   .paragraph-font();
 }
 
-.modal-order-form__fieldset {
+.modal-order-form__container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 31px;
+}
+
+.modal-order-form__label {
+  width: 82px;
+  min-height: 52px;
+
+  border: 2px solid fade(@bg-color-7, 10%);
+  @media @tablet-width {
+    width: 112px;
+  }
+}
+
+.modal-order-form__radio {
+  .v-hidden();
+}
+
+.modal-order-form__submit {
+  display: block;
+  width: 100%;
+
+  color: @color-4;
+
+  background-color: @bg-color-6;
   border: none;
 }

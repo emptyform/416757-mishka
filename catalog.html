@@ -8,14 +8,14 @@
   <body class="page-body">
     <header class="page-header">
       <div class="page-header__wrapper">
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--closed">
           <button class="main-nav__toggler"></button>
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--index">
               <!-- <a class="page-header__logo-link"><img src="http://placehold.it/86x35" alt="Магазин «Мишка»" width="86" height="35"></a> -->
             </li>
             <li class="main-nav__item main-nav__item--catalog">
-              <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
+              <a class="main-nav__link">Каталог товаров</a>
             </li>
             <li class="main-nav__item main-nav__item--custom-order">
               <a href="form.html" class="main-nav__link">Вязание на заказ</a>
@@ -104,10 +104,10 @@
               <!-- <a class="page-footer__logo-link"><img src="http://placehold.it/86x35" alt="Магазин «Мишка»" width="86" height="35"></a> -->
         </div>
         <div class="page-footer__socials">
-          <span class="page-footer__socials-links social-links">
-            <!-- <a href="#" class="social-links__item social-links__item--insta">Наш Instagram</a>
-            <a href="#" class="social-links__item social-links__item--fb">Наш Facebook</a>
-            <a href="#" class="social-links__item social-links__item--tw">Наш Twitter</a> -->
+          <span class="page-footer__socials-links">
+            <!-- <a href="#" class="page-footer__socials-links page-footer__socials-links--insta">Наш Instagram</a>
+            <a href="#" class="page-footer__socials-links page-footer__socials-links--fb">Наш Facebook</a>
+            <a href="#" class="page-footer__socials-links page-footer__socials-links--tw">Наш Twitter</a> -->
           </span>
         </div>
         <p class="page-footer__copyright">
@@ -116,27 +116,29 @@
         </p>
       </div>
     </footer>
-    <!-- <div class="modal-order">
-      <div class="wrapper">
+    <div class="modal-order">
+      <div class="modal-order__wrapper">
         <h2 class="modal-order__title">Добавить в корзину</h2>
         <form class="modal-order-form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="modal-order-form__fieldset">
-            <legend class="modal-order-form__legend">Выберите размер:</legend>
-            <label class="modal-order-form__label-btn btn" for="size-s">
-              <input type="radio" name="size" value="s" id="size-s">
-              S
-            </label>
-            <label class="modal-order-form__label-btn btn" for="size-m"><input type="radio" name="size" value="m" id="size-m">
-              M
-            </label>
-            <label class="modal-order-form__label-btn btn" for="size-l"><input type="radio" name="size" value="l" id="size-l">
-              L
-            </label>
-          </fieldset>
+          <div class="modal-order-form__fieldset">
+            <h3 class="modal-order-form__legend">Выберите размер:</h3>
+            <div class="modal-order-form__container">
+              <label class="modal-order-form__label btn" for="size-s">
+                <input class="modal-order-form__radio" type="radio" name="size" value="s" id="size-s">
+                S
+              </label>
+              <label class="modal-order-form__label btn" for="size-m"><input class="modal-order-form__radio" type="radio" name="size" value="m" id="size-m">
+                M
+              </label>
+              <label class="modal-order-form__label btn" for="size-l"><input class="modal-order-form__radio" type="radio" name="size" value="l" id="size-l">
+                L
+              </label>
+            </div>
+          </div>
           <button class="modal-order-form__submit btn" type="submit">Добавить</button>
         </form>
       </div>
-    </div> -->
+    </div>
   </body>
 </html>
 

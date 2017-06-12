@@ -8,7 +8,7 @@
   <body class="page-body">
     <header class="page-header">
       <div class="page-header__wrapper">
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--opened">
           <button class="main-nav__toggler"></button>
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--index">
@@ -18,7 +18,7 @@
               <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
             </li>
             <li class="main-nav__item main-nav__item--custom-order">
-              <a href="form.html" class="main-nav__link">Вязание на заказ</a>
+              <a class="main-nav__link">Вязание на заказ</a>
             </li>
             <li class="main-nav__item main-nav__item--search">
               <a href="#" class="main-nav__link"><span>Поиск по сайту</span></a>
@@ -50,7 +50,7 @@
           <form class="custom-order-form" action="https://echo.htmlacademy.ru" method="post">
 
             <div class="custom-order-form__fieldset">
-              <h2 class="custom-order-form__legend custom-order-form__legend--radio">Тип</h2>
+              <h2 class="custom-order-form__legend custom-order-form__legend--radio"><span>Тип</span></h2>
 
               <div class="custom-order-form__wrapper">
                 <label class="custom-order-form__label custom-order-form__label--type" for="order-type-accessory">
@@ -66,7 +66,7 @@
 
             <div class="custom-order-form__wrapper-decorative">
               <div class="custom-order-form__fieldset">
-                <h2 class="custom-order-form__legend">Цвет</h2>
+                <h2 class="custom-order-form__legend"><span>Цвет</span></h2>
 
                 <div class="custom-order-form__wrapper custom-order-form__wrapper--color">
 
@@ -98,21 +98,21 @@
             </div>
 
             <div class="custom-order-form__fieldset custom-order-form__fieldset--name">
-              <h2 class="custom-order-form__legend custom-order-form__legend--name">ФИО</h2>
+              <h2 class="custom-order-form__legend custom-order-form__legend--name"><span>ФИО</span></h2>
 
               <div class="custom-order-form__wrapper custom-order-form__wrapper--name">
                 <div class="custom-order-form__container custom-order-form__container--name">
-                  <label class="custom-order-form__label custom-order-form__label--name" for="customer-first-name">Имя:</label>
+                  <label class="custom-order-form__label custom-order-form__label--name" for="customer-first-name"><span>Имя:</span></label>
                   <input class="custom-order-form__name" type="text" name="customer-first-name" id="customer-first-name" placeholder="Введите ваше имя*" required>
                 </div>
 
-                <div class="custom-order-form__container custom-order-form__container--name">
-                  <label class="custom-order-form__label  custom-order-form__label--name" for="customer-second-name">Фамилия:</label>
+                <div class="custom-order-form__container <span></span>custom-order-form__container--name">
+                  <label class="custom-order-form__label  custom-order-form__label--name" for="customer-second-name"><span>Фамилия:</span></label>
                   <input class="custom-order-form__name" type="text" name="customer-second-name" id="customer-second-name" placeholder="Укажите фамилию*" required>
                 </div>
 
                 <div class="custom-order-form__container custom-order-form__container--name">
-                  <label class="custom-order-form__label  custom-order-form__label--name" for="customer-patronymic">Отчество:</label>
+                  <label class="custom-order-form__label  custom-order-form__label--name" for="customer-patronymic"><span>Отчество:</span></label>
                   <input class="custom-order-form__name" type="text" name="customer-patronymic" id="customer-patronymic" placeholder="Отчество, если желаете">
                 </div>
               </div>
@@ -121,20 +121,20 @@
 
             <div class="custom-order-form__wrapper-decorative">
               <div class="custom-order-form__fieldset custom-order-form__fieldset--phone">
-                <h2 class="custom-order-form__legend custom-order-form__legend--phone">Тел</h2>
+                <h2 class="custom-order-form__legend custom-order-form__legend--phone"><span>Тел</span></h2>
                 <input class="custom-order-form__phone-number" type="tel" name="customer-phone-number" placeholder="+7 ХХХ ХХ ХХ*" required>
               </div>
             </div>
 
             <div class="custom-order-form__wrapper-decorative">
               <div class="custom-order-form__fieldset custom-order-form__fieldset--email">
-                <h2 class="custom-order-form__legend custom-order-form__legend--email">E-mail</h2>
+                <h2 class="custom-order-form__legend custom-order-form__legend--email"><span>E-mail</span></h2>
                 <input type="email" class="custom-order-form__email" name="customer-email" placeholder="Ваш Email*" required>
               </div>
             </div>
 
             <div class="custom-order-form__fieldset custom-order-form__fieldset--textarea">
-              <h2 class="custom-order-form__legend">Доп</h2>
+              <h2 class="custom-order-form__legend"><span>Доп</span></h2>
               <textarea class="custom-order-form__textarea" name="additional" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </div>
 
@@ -153,10 +153,10 @@
               <!-- <a class="page-footer__logo-link"><img src="http://placehold.it/86x35" alt="Магазин «Мишка»" width="86" height="35"></a> -->
         </div>
         <div class="page-footer__socials">
-          <span class="page-footer__socials-links social-links">
-            <!-- <a href="#" class="social-links__item social-links__item--insta">Наш Instagram</a>
-            <a href="#" class="social-links__item social-links__item--fb">Наш Facebook</a>
-            <a href="#" class="social-links__item social-links__item--tw">Наш Twitter</a> -->
+          <span class="page-footer__socials-links">
+            <!-- <a href="#" class="page-footer__socials-links page-footer__socials-links--insta">Наш Instagram</a>
+            <a href="#" class="page-footer__socials-links page-footer__socials-links--fb">Наш Facebook</a>
+            <a href="#" class="page-footer__socials-links page-footer__socials-links--tw">Наш Twitter</a> -->
           </span>
         </div>
         <p class="page-footer__copyright">

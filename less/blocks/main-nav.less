@@ -1,4 +1,6 @@
 .main-nav {
+  position: relative;
+
   width: 100%;
 
   font-weight: 700;
@@ -8,32 +10,122 @@
   color: @color-1;
 
   background-color: transparent;
+  @media @mobile-only-width {
+    background-color: @bg-color-1;
+  }
+}
+
+.main-nav--opened {
+  @media @mobile-only-width {
+    height: 79px;
+  }
+}
+
+.main-nav--opened .main-nav__item {
+  &--catalog,
+  &--custom-order,
+  &--search,
+  &--cart,
+  &--index {
+    @media @mobile-only-width {
+      display: block;
+      min-height: 80px;
+      padding: 27.5px 40px 27.5px 75px;
+
+      background-color: @bg-color-1;
+      border-bottom: 1px solid @bg-color-5;
+    }
+  }
 }
 
 .main-nav__toggler {
-  .v-hidden();
+  display: none;
+  @media @mobile-only-width {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 5;
+
+    display: block;
+    width: 20px;
+    height: 20px;
+
+    font-size: 0;
+
+    background-color: @bg-color-1;
+    border: none;
+    cursor: pointer;
+    // &:hover {
+    //   background-color: #624530;
+    // }
+    // &:active {
+    //   background-color: #624530;
+    // }
+  }
 }
+
+.main-nav--closed .main-nav__toggler::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+
+  width: 20px;
+  height: 2px;
+
+  background-color: #1d1919;
+  box-shadow: 0 6px 0 0 #1d1919,
+  0 12px 0 0 #1d1919;
+}
+
+.main-nav--opened .main-nav__toggler {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -4px;
+
+    width: 28px;
+    height: 2px;
+
+    background-color: #1d1919;
+  }
+  &::before {
+    box-shadow: none;
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
 
 .main-nav__list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   min-height: 80px;
   margin: 0;
   padding: 0;
 
   list-style: none;
   @media @tablet-width {
+    flex-direction: row;
+    flex-wrap: wrap;
     min-height: 155px;
   }
 }
+
+
+
 
 .main-nav__item {
   display: none;
   &--index {
     display: block;
-    width: 86px;
-    height: 35px;
-    margin: auto;
+    // width: 86px;
+    height: 80px;
+    // margin: auto;
     @media @tablet-width {
       order: 0;
       width: 369px;
@@ -191,6 +283,8 @@
     }
   }
 }
+
+
 
 .main-nav__link {
   color: inherit;
