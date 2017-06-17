@@ -18,6 +18,8 @@
   &--main {
     padding-bottom: 39px;
     @media @tablet-width {
+      position: relative;
+
       padding-bottom: 52px;
     }
     @media @desktop-width {
@@ -101,6 +103,14 @@
   .paragraph-font();
   a {
     border-bottom: 1px solid @bg-color-6;
+    &:hover {
+      color: @color-3;
+    }
+    &:active {
+      color: fade(@color-3, 30%);
+
+      border-bottom-color: fade(@bg-color-6, 10%);
+    }
   }
   @media @tablet-width {
     width: 334px;
@@ -109,8 +119,8 @@
 
 .contacts__adress {
   display: flex;
-  margin: 0;
   align-items: flex-start;
+  margin: 0;
 
   .paragraph-font();
   @media @tablet-width {
@@ -125,7 +135,6 @@
 
 .contacts__value {
   // flex-grow: 1;
-
 }
 .contacts a {
   color: inherit;
@@ -136,6 +145,8 @@
 }
 
 .contacts__map {
+  position: relative;
+
   width: 320px;
   height: 457px;
   @media @tablet-width {
@@ -155,5 +166,33 @@
   }
   @media @desktop-width {
     margin: 0;
+  }
+}
+
+.contacts__icon {
+  display: none;
+  @media @tablet-width {
+    position: absolute;
+    top: 41px;
+    right: 51px;
+
+    display: block;
+  }
+  @media @desktop-width {
+    top: 128px;
+    left: 113px;
+  }
+}
+
+.contacts__map-icon {
+  position: absolute;
+  top: 167px;
+  left: 123px;
+  @media @tablet-width {
+    top: 164px;
+    left: 350px;
+  }
+  @media @desktop-width {
+    left: 237px;
   }
 }

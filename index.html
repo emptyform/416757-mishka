@@ -9,29 +9,52 @@
     <header class="page-header">
       <div class="page-header__wrapper">
         <h1 class="page-header__title">Магазин игрушек и предметов интерьера «Мишка»</h1> <!-- Спрячем -->
-        <nav class="main-nav main-nav--opened">
-          <button class="main-nav__toggler"></button>
+        <nav class="main-nav main-nav--closed">
+          <button class="main-nav__toggler">
+            <svg class="main-nav__toggler-icon main-nav__toggler-icon--opened" width="20" height="14">
+             <use xlink:href="img/icons.svg#icon-menu-close"></use>
+            </svg>
+            <svg class="main-nav__toggler-icon main-nav__toggler-icon--closed" width="20" height="14">
+             <use xlink:href="img/icons.svg#icon-menu-open"></use>
+            </svg>
+          </button>
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--index">
-              <!-- <a class="page-header__logo-link"><img src="http://placehold.it/86x35" alt="Магазин «Мишка»" width="86" height="35"></a> -->
+              <a class="main-nav__link main-nav__link--index main-nav__link--active">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                  <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                  <img class="main-nav__logo-img" src="img/logo-mobile.svg" width="86"  alt="Магазин «Мишка»">
+                </picture>
+                </a>
             </li>
             <li class="main-nav__item main-nav__item--catalog">
-              <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
+              <a href="catalog.html" class="main-nav__link main-nav__link--catalog">Каталог товаров</a>
             </li>
             <li class="main-nav__item main-nav__item--custom-order">
-              <a href="form.html" class="main-nav__link">Вязание на заказ</a>
+              <a href="form.html" class="main-nav__link main-nav__link--custom-order">Вязание на заказ</a>
             </li>
             <li class="main-nav__item main-nav__item--search">
-              <a href="#" class="main-nav__link"><span>Поиск по сайту</span></a>
+              <a href="#" class="main-nav__link main-nav__link--search">
+              <svg class="main-nav__link-icon main-nav__link-icon--search" width="18" height="19">
+                <use xlink:href="img/icons.svg#icon-search"></use>
+              </svg>
+              <span>Поиск по сайту</span>
+              </a>
             </li>
             <li class="main-nav__item main-nav__item--cart">
-              <a href="#" class="main-nav__link">Корзина: пока пуста</a>
+              <a href="#" class="main-nav__link main-nav__link--cart">
+              <svg class="main-nav__link-icon main-nav__link-icon--cart" width="21" height="18">
+                <use xlink:href="img/icons.svg#icon-cart"></use>
+              </svg>
+              Корзина: пока пуста
+              </a>
             </li>
             <li class="main-nav__item main-nav__item--new">
-              <a href="#" class="main-nav__link">Новые поступления</a>
+              <a href="#" class="main-nav__link main-nav__link--new">Новые поступления</a>
             </li>
             <li class="main-nav__item main-nav__item--sale">
-              <a href="#" class="main-nav__link">Распродажа</a>
+              <a href="#" class="main-nav__link main-nav__link--sale">Распродажа</a>
             </li>
             <li class="main-nav__item main-nav__item--info">
               Бесплатная доставка по России
@@ -45,11 +68,19 @@
         <div class="catalog-preview__wrapper">
           <h2 class="catalog-preview__title">Милые штуки ручной работы для дома</h2>
           <ul class="catalog-preview__list">
-            <li class="catalog-preview__item catalog-preview__item--toys">
-              <a class="catalog-preview__link" href="#">Предметы интерьера</a>
-            </li>
             <li class="catalog-preview__item catalog-preview__item--interior">
-              <a class="catalog-preview__link" href="#">Детские игрушки</a>
+              <a class="catalog-preview__link catalog-preview__link--interior" href="#">
+              <svg class="catalog-preview__link-icon catalog-preview__link-icon--interior" width="41" height="62">
+                <use xlink:href="img/icons.svg#icon-interior"></use>
+              </svg>
+              Предметы интерьера</a>
+            </li>
+            <li class="catalog-preview__item catalog-preview__item--toys">
+              <a class="catalog-preview__link catalog-preview__link--toys" href="#">
+              <svg class="catalog-preview__link-icon catalog-preview__link-icon--toys" width="61" height="61">
+                <use xlink:href="img/icons.svg#icon-toy"></use>
+              </svg>
+              Детские игрушки</a>
             </li>
           </ul>
         </div>
@@ -73,7 +104,13 @@
               <td>15 см</td>
             </tr>
           </table>
-          <div class="featured-item__img"><img src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки" width="260" height="315"></div>
+          <div class="featured-item__img">
+          <picture>
+              <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+              <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x"  alt="Вязаные корзинки">
+            </picture>
+          </div>
           <p class="featured-item__price">Цена: 990 руб.</p>
           <a href="#" class="featured-item__buy-btn btn">Заказать</a>
         </div>
@@ -82,12 +119,36 @@
         <div class="about__wrapper">
           <h2 class="about__title">Коротко о нас:</h2>
             <ul class="about__list">
-              <li class="about__item about__item--material">Экологически чистые материалы</li>
-              <li class="about__item about__item--style">Скандинавский стиль по российской цене</li>
-              <li class="about__item about__item--likes">Увеличивает лайки на фотографиях</li>
-              <li class="about__item about__item--handmade">Связано вручную с любовью и умилением</li>
-              <li class="about__item about__item--madein">Поддержка отечественного производителя</li>
-              <li class="about__item about__item--nicebox">Поставляется в подарочной упаковке</li>
+              <li class="about__item about__item--material">
+              <svg class="about__item-icon about__item-icon--material" width="33" height="38">
+                <use xlink:href="img/icons.svg#icon-feature-1"></use>
+              </svg>
+                Экологически чистые материалы</li>
+              <li class="about__item about__item--style">
+              <svg class="about__item-icon about__item-icon--style" width="33" height="38">
+                <use xlink:href="img/icons.svg#icon-feature-3"></use>
+              </svg>
+                Скандинавский стиль по российской цене</li>
+              <li class="about__item about__item--likes">
+              <svg class="about__item-icon about__item-icon--likes" width="33" height="38">
+                <use xlink:href="img/icons.svg#icon-feature-5"></use>
+              </svg>
+                Увеличивает лайки на фотографиях</li>
+              <li class="about__item about__item--handmade">
+              <svg class="about__item-icon about__item-icon--handmade" width="33" height="38">
+                <use xlink:href="img/icons.svg#icon-feature-2"></use>
+              </svg>
+                Связано вручную с любовью и умилением</li>
+              <li class="about__item about__item--madein">
+              <svg class="about__item-icon about__item-icon--madein" width="33" height="38">
+                <use xlink:href="img/icons.svg#icon-feature-4"></use>
+              </svg>
+                Поддержка отечественного производителя</li>
+              <li class="about__item about__item--nicebox">
+              <svg class="about__item-icon about__item-icon--nicebox" width="33" height="38">
+                <use xlink:href="img/icons.svg#icon-feature-6"></use>
+              </svg>
+                Поставляется в подарочной упаковке</li>
             </ul>
         </div>
       </section>
@@ -105,8 +166,16 @@
               </cite>
             </blockquote>
             <div class="reviews__pagination">
-              <a href="#" class="reviews__btn reviews__btn--prew btn"><span>Предыдущий отзыв</span></a>
-              <a href="#" class="reviews__btn reviews__btn--next btn"><span>Следующий отзыв</span></a>
+              <a href="#" class="reviews__btn reviews__btn--prew btn">
+                <svg class="reviews__btn-icon reviews__btn-icon--prew" width="51" height="26">
+                  <use xlink:href="img/icons.svg#icon-left-arrow"></use>
+                </svg>
+              </a>
+              <a href="#" class="reviews__btn reviews__btn--next btn">
+                <svg class="reviews__btn-icon reviews__btn-icon--next" width="51" height="26">
+                  <use xlink:href="img/icons.svg#icon-right-arrow"></use>
+                </svg>
+              </a>
             </div>
           </div>
           <a href="#" class="reviews__write-btn btn">Написать</a>
@@ -114,6 +183,9 @@
       </section>
       <section class="contacts">
         <div class="contacts__wrapper contacts__wrapper--main">
+        <svg class="contacts__icon contacts__icon--flag" width="47" height="81">
+                  <use xlink:href="img/icons.svg#icon-flag"></use>
+        </svg>
           <div class="contacts__wrapper contacts__wrapper--narrow-top">
             <h2 class="contacts__title">Контакты</h2>
             <div class="contacts__wrapper contacts__wrapper--inner">
@@ -123,7 +195,7 @@
               </p>
               <p class="contacts__adress">
                 <span class="contacts__type">адрес:</span>
-                <span class="contacts__value contacts__value--narrow">г. Санкт-Петербург,
+                <span class="contacts__value">г. Санкт-Петербург,
                                               ул. Большая Конюшенная,
                                               д. 19/8, офис 101</span>
               </p>
@@ -131,7 +203,17 @@
           </div>
           <div class="contacts__wrapper contacts__wrapper--wide">
             <div class="contacts__map">
+              <svg class="contacts__map-icon" width="67" height="100">
+                    <use xlink:href="img/icons.svg#icon-map-pin"></use>
+              </svg>
               <a href="#" class="contacts__map-link">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+                <img src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x"  alt="г. Санкт-Петербург,
+                                                      ул. Большая Конюшенная,
+                                                      д. 19/8, офис 101">
+              </picture>
                 <!-- <img class="contacts__map-img" src="http://placehold.it/320x457" alt="г. Санкт-Петербург,
                                                       ул. Большая Конюшенная,
                                                       д. 19/8, офис 101"> -->
@@ -147,18 +229,38 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
-              <!-- <a class="page-footer__logo-link"><img src="http://placehold.it/86x35" alt="Магазин «Мишка»" width="86" height="35"></a> -->
+          <a href="#" class="page-footer__logo-link">
+            <svg class="page-footer__logo-link-icon" width="86" height="35">
+                  <use xlink:href="img/icons.svg#logo-footer"></use>
+            </svg>
+          </a>
         </div>
         <div class="page-footer__socials">
           <span class="page-footer__socials-links">
-            <!-- <a href="#" class="page-footer__socials-links page-footer__socials-links--insta">Наш Instagram</a>
-            <a href="#" class="page-footer__socials-links page-footer__socials-links--fb">Наш Facebook</a>
-            <a href="#" class="page-footer__socials-links page-footer__socials-links--tw">Наш Twitter</a> -->
+            <a href="#" class="page-footer__socials-link page-footer__socials-link--insta">
+              <svg class="page-footer__socials-link-icon page-footer__socials-link-icon--insta" width="22" height="21">
+                  <use xlink:href="img/icons.svg#icon-insta"></use>
+              </svg>
+            </a>
+            <a href="#" class="page-footer__socials-link page-footer__socials-link--fb">
+              <svg class="page-footer__socials-link-icon page-footer__socials-link-icon--fb" width="15" height="29">
+                  <use xlink:href="img/icons.svg#icon-fb"></use>
+              </svg>
+            </a>
+            <a href="#" class="page-footer__socials-link page-footer__socials-link--tw">
+              <svg class="page-footer__socials-link-icon page-footer__socials-link-icon--tw" width="24" height="20">
+                  <use xlink:href="img/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
           </span>
         </div>
         <p class="page-footer__copyright">
           Разработано
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-link"><span>HTML Academy</span></a>
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-link">
+            <svg class="page-footer__copyright-link-icon" width="27" height="34">
+                  <use xlink:href="img/icons.svg#icon-htmlacademy"></use>
+            </svg>
+          </a>
         </p>
       </div>
     </footer>

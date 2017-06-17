@@ -8,29 +8,53 @@
   <body class="page-body">
     <header class="page-header">
       <div class="page-header__wrapper">
-        <nav class="main-nav main-nav--opened">
-          <button class="main-nav__toggler"></button>
+        <h1 class="page-header__title">Магазин игрушек и предметов интерьера «Мишка»</h1> <!-- Спрячем -->
+        <nav class="main-nav main-nav--closed">
+          <button class="main-nav__toggler">
+            <svg class="main-nav__toggler-icon main-nav__toggler-icon--opened" width="20" height="14">
+             <use xlink:href="img/icons.svg#icon-menu-close"></use>
+            </svg>
+            <svg class="main-nav__toggler-icon main-nav__toggler-icon--closed" width="20" height="14">
+             <use xlink:href="img/icons.svg#icon-menu-open"></use>
+            </svg>
+          </button>
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--index">
-              <!-- <a class="page-header__logo-link"><img src="http://placehold.it/86x35" alt="Магазин «Мишка»" width="86" height="35"></a> -->
+              <a href="index.html" class="main-nav__link main-nav__link--index">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                  <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                  <img class="main-nav__logo-img" src="img/logo-mobile.svg" width="86" alt="Магазин «Мишка»">
+                </picture>
+                </a>
             </li>
             <li class="main-nav__item main-nav__item--catalog">
-              <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
+              <a href="catalog.html" class="main-nav__link main-nav__link--catalog">Каталог товаров</a>
             </li>
             <li class="main-nav__item main-nav__item--custom-order">
-              <a class="main-nav__link">Вязание на заказ</a>
+              <a class="main-nav__link main-nav__link--custom-order main-nav__link--active">Вязание на заказ</a>
             </li>
             <li class="main-nav__item main-nav__item--search">
-              <a href="#" class="main-nav__link"><span>Поиск по сайту</span></a>
+              <a href="#" class="main-nav__link main-nav__link--search">
+              <svg class="main-nav__link-icon main-nav__link-icon--search" width="18" height="19">
+                <use xlink:href="img/icons.svg#icon-search"></use>
+              </svg>
+              <span>Поиск по сайту</span>
+              </a>
             </li>
             <li class="main-nav__item main-nav__item--cart">
-              <a href="#" class="main-nav__link">Корзина: пока пуста</a>
+              <a href="#" class="main-nav__link main-nav__link--cart">
+              <svg class="main-nav__link-icon main-nav__link-icon--cart" width="21" height="18">
+                <use xlink:href="img/icons.svg#icon-cart"></use>
+              </svg>
+              Корзина: пока пуста
+              </a>
             </li>
             <li class="main-nav__item main-nav__item--new">
-              <a href="#" class="main-nav__link">Новые поступления</a>
+              <a href="#" class="main-nav__link main-nav__link--new">Новые поступления</a>
             </li>
             <li class="main-nav__item main-nav__item--sale">
-              <a href="#" class="main-nav__link">Распродажа</a>
+              <a href="#" class="main-nav__link main-nav__link--sale">Распродажа</a>
             </li>
             <li class="main-nav__item main-nav__item--info">
               Бесплатная доставка по России
@@ -53,14 +77,16 @@
               <h2 class="custom-order-form__legend custom-order-form__legend--radio"><span>Тип</span></h2>
 
               <div class="custom-order-form__wrapper">
-                <label class="custom-order-form__label custom-order-form__label--type" for="order-type-accessory">
-                <input class="custom-order-form__radio" type="radio" name="order-type" value="accessory" id="order-type-accessory">
-                Аксессуар для интерьера
-                </label>
-                <label class="custom-order-form__label custom-order-form__label--type" for="order-type-toy">
-                <input class="custom-order-form__radio" type="radio" name="order-type" value="toy" id="order-type-toy">
-                Детская игрушка
-                </label>
+                <div>
+                  <input class="custom-order-form__radio" type="radio" name="order-type" value="accessory" id="order-type-accessory">
+                  <label class="custom-order-form__label custom-order-form__label--type" for="order-type-accessory">Аксессуар для интерьера
+                  </label>
+                </div>
+                <div>
+                  <input class="custom-order-form__radio" type="radio" name="order-type" value="toy" id="order-type-toy" checked>
+                  <label class="custom-order-form__label custom-order-form__label--type" for="order-type-toy">Детская игрушка
+                  </label>
+                </div>
               </div>
             </div>
 
@@ -70,29 +96,46 @@
 
                 <div class="custom-order-form__wrapper custom-order-form__wrapper--color">
 
-                  <label class="custom-order-form__label custom-order-form__label--color" for="order-color-white">
-                  <input class="custom-order-form__checkbox" type="checkbox" name="order-color-white" id="order-color-white">Белый
-                  </label>
+                  <div>
+                    <input class="custom-order-form__checkbox" type="checkbox" name="order-color-white" id="order-color-white">
+                    <label class="custom-order-form__label custom-order-form__label--color" for="order-color-white">Белый
+                    </label>
+                  </div>
 
-                  <label class="custom-order-form__label custom-order-form__label--color" for="order-color-gray">
-                  <input class="custom-order-form__checkbox" type="checkbox" name="order-color-gray" id="order-color-gray">Серый
-                  </label>
+                  <div>
+                    <input class="custom-order-form__checkbox" type="checkbox" name="order-color-gray" id="order-color-gray">
+                    <label class="custom-order-form__label custom-order-form__label--color" for="order-color-gray">
+                    Серый
+                    </label>
+                  </div>
 
-                  <label class="custom-order-form__label custom-order-form__label--color" for="order-color-tiffany">
-                  <input class="custom-order-form__checkbox" type="checkbox" name="order-color-tiffany" id="order-color-tiffany">«Тиффани»
-                  </label>
+                  <div>
+                    <input class="custom-order-form__checkbox" type="checkbox" name="order-color-tiffany" id="order-color-tiffany">
+                    <label class="custom-order-form__label custom-order-form__label--color" for="order-color-tiffany">
+                    «Тиффани»
+                    </label>
+                  </div>
 
-                  <label class="custom-order-form__label custom-order-form__label--color" for="order-color-black">
-                  <input class="custom-order-form__checkbox" type="checkbox" name="order-color-black" id="order-color-black">Черный
-                  </label>
+                  <div>
+                    <input class="custom-order-form__checkbox" type="checkbox" name="order-color-black" id="order-color-black">
+                    <label class="custom-order-form__label custom-order-form__label--color" for="order-color-black">
+                    Черный
+                    </label>
+                  </div>
 
-                  <label class="custom-order-form__label custom-order-form__label--color" for="order-color-pink">
-                  <input class="custom-order-form__checkbox" type="checkbox" name="order-color-pink" id="order-color-pink">Розовый
-                  </label>
+                  <div>
+                    <input class="custom-order-form__checkbox" type="checkbox" name="order-color-pink" id="order-color-pink">
+                    <label class="custom-order-form__label custom-order-form__label--color" for="order-color-pink">
+                    Розовый
+                    </label>
+                  </div>
 
-                  <label class="custom-order-form__label custom-order-form__label--color" for="order-color-orange">
-                  <input class="custom-order-form__checkbox" type="checkbox" name="order-color-orange" id="order-color-orange">Оранжевый
-                  </label>
+                  <div>
+                    <label class="custom-order-form__label custom-order-form__label--color" for="order-color-orange">
+                    <input class="custom-order-form__checkbox" type="checkbox" name="order-color-orange" id="order-color-orange">
+                    Оранжевый
+                    </label>
+                  </div>
                 </div>
               </div>
             </div>
@@ -106,7 +149,7 @@
                   <input class="custom-order-form__name" type="text" name="customer-first-name" id="customer-first-name" placeholder="Введите ваше имя*" required>
                 </div>
 
-                <div class="custom-order-form__container <span></span>custom-order-form__container--name">
+                <div class="custom-order-form__container custom-order-form__container--name">
                   <label class="custom-order-form__label  custom-order-form__label--name" for="customer-second-name"><span>Фамилия:</span></label>
                   <input class="custom-order-form__name" type="text" name="customer-second-name" id="customer-second-name" placeholder="Укажите фамилию*" required>
                 </div>
@@ -122,14 +165,24 @@
             <div class="custom-order-form__wrapper-decorative">
               <div class="custom-order-form__fieldset custom-order-form__fieldset--phone">
                 <h2 class="custom-order-form__legend custom-order-form__legend--phone"><span>Тел</span></h2>
-                <input class="custom-order-form__phone-number" type="tel" name="customer-phone-number" placeholder="+7 ХХХ ХХ ХХ*" required>
+                <div class="custom-order-form__input-container">
+                  <input class="custom-order-form__phone-number" type="tel" name="customer-phone-number" placeholder="+7 ХХХ ХХ ХХ*" required>
+                  <svg class="custom-order-form__input-icon custom-order-form__input-icon--phone" width="25" height="24">
+                    <use xlink:href="img/icons.svg#icon-phone"></use>
+                  </svg>
+                </div>
               </div>
             </div>
 
             <div class="custom-order-form__wrapper-decorative">
               <div class="custom-order-form__fieldset custom-order-form__fieldset--email">
                 <h2 class="custom-order-form__legend custom-order-form__legend--email"><span>E-mail</span></h2>
-                <input type="email" class="custom-order-form__email" name="customer-email" placeholder="Ваш Email*" required>
+                <div class="custom-order-form__input-container">
+                  <input type="email" class="custom-order-form__email" name="customer-email" placeholder="Ваш Email*" required>
+                  <svg class="custom-order-form__input-icon custom-order-form__input-icon--email" width="32" height="21">
+                    <use xlink:href="img/icons.svg#icon-mail"></use>
+                  </svg>
+                </div>
               </div>
             </div>
 
@@ -150,21 +203,40 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
-              <!-- <a class="page-footer__logo-link"><img src="http://placehold.it/86x35" alt="Магазин «Мишка»" width="86" height="35"></a> -->
+          <a href="#" class="page-footer__logo-link">
+            <svg class="page-footer__logo-link-icon" width="86" height="35">
+                  <use xlink:href="img/icons.svg#logo-footer"></use>
+            </svg>
+          </a>
         </div>
         <div class="page-footer__socials">
           <span class="page-footer__socials-links">
-            <!-- <a href="#" class="page-footer__socials-links page-footer__socials-links--insta">Наш Instagram</a>
-            <a href="#" class="page-footer__socials-links page-footer__socials-links--fb">Наш Facebook</a>
-            <a href="#" class="page-footer__socials-links page-footer__socials-links--tw">Наш Twitter</a> -->
+            <a href="#" class="page-footer__socials-link page-footer__socials-link--insta">
+              <svg class="page-footer__socials-link-icon page-footer__socials-link-icon--insta" width="22" height="21">
+                  <use xlink:href="img/icons.svg#icon-insta"></use>
+              </svg>
+            </a>
+            <a href="#" class="page-footer__socials-link page-footer__socials-link--fb">
+              <svg class="page-footer__socials-link-icon page-footer__socials-link-icon--fb" width="15" height="29">
+                  <use xlink:href="img/icons.svg#icon-fb"></use>
+              </svg>
+            </a>
+            <a href="#" class="page-footer__socials-link page-footer__socials-link--tw">
+              <svg class="page-footer__socials-link-icon page-footer__socials-link-icon--tw" width="24" height="20">
+                  <use xlink:href="img/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
           </span>
         </div>
         <p class="page-footer__copyright">
           Разработано
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-link"><span>HTML Academy</span></a>
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__copyright-link">
+            <svg class="page-footer__copyright-link-icon" width="27" height="34">
+                  <use xlink:href="img/icons.svg#icon-htmlacademy"></use>
+            </svg>
+          </a>
         </p>
       </div>
     </footer>
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
   </body>
 </html>

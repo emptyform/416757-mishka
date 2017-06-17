@@ -2,15 +2,24 @@
   display: inline-block;
   width: 260px;
   min-height: 52px;
-  padding: 12px 10px;
+  padding: 14px 10px;
 
   vertical-align: middle;
   text-align: center;
 
   border: 2px solid @color-2;
+  cursor: pointer;
 
   .btn-font();
   @media @tablet-width {
     padding: 15px 10px;
+  }
+  &:hover {
+    background-color: @bg-color-7;
+    color: @color-4;
+  }
+  &:active {
+    // background-color: @bg-color-7;
+    color: fade(@color-4, 30%);
   }
 }
