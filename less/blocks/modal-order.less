@@ -10,8 +10,12 @@
   font-family: @font-family;
 
   background: rgba(255, 255, 255, 0.9);
-  display: none;
-
+  &--closed {
+    display: none;
+  }
+  &--opened {
+    display: block;
+  }
 }
 
 
@@ -44,5 +48,3 @@
   color: @color-1;
   text-transform: uppercase;
 }
-
-

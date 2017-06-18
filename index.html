@@ -4,12 +4,16 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
     <title>Магазин «Мишка»</title>
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.js" async></script>
   </head>
   <body class="page-body">
     <header class="page-header">
       <div class="page-header__wrapper">
         <h1 class="page-header__title">Магазин игрушек и предметов интерьера «Мишка»</h1> <!-- Спрячем -->
-        <nav class="main-nav main-nav--closed">
+        <nav class="main-nav main-nav--closed main-nav--no-js">
           <button class="main-nav__toggler">
             <svg class="main-nav__toggler-icon main-nav__toggler-icon--opened" width="20" height="14">
              <use xlink:href="img/icons.svg#icon-menu-close"></use>
@@ -214,9 +218,6 @@
                                                       ул. Большая Конюшенная,
                                                       д. 19/8, офис 101">
               </picture>
-                <!-- <img class="contacts__map-img" src="http://placehold.it/320x457" alt="г. Санкт-Петербург,
-                                                      ул. Большая Конюшенная,
-                                                      д. 19/8, офис 101"> -->
             </a>
           </div>
         </div>
@@ -264,29 +265,38 @@
         </p>
       </div>
     </footer>
-    <div class="modal-order">
+    <div class="modal-order modal-order--closed">
       <div class="modal-order__wrapper">
         <h2 class="modal-order__title">Добавить в корзину</h2>
         <form class="modal-order-form" action="https://echo.htmlacademy.ru" method="post">
           <div class="modal-order-form__fieldset">
             <h3 class="modal-order-form__legend">Выберите размер:</h3>
             <div class="modal-order-form__container">
-              <label class="modal-order-form__label btn" for="size-s">
-                <input class="modal-order-form__radio" type="radio" name="size" value="s" id="size-s">
-                S
-              </label>
-              <label class="modal-order-form__label btn" for="size-m"><input class="modal-order-form__radio" type="radio" name="size" value="m" id="size-m">
-                M
-              </label>
-              <label class="modal-order-form__label btn" for="size-l"><input class="modal-order-form__radio" type="radio" name="size" value="l" id="size-l">
-                L
-              </label>
+              <div class="modal-order-form__input-container">
+                  <input class="modal-order-form__radio" type="radio" name="size" value="s" id="size-s">
+                <label class="modal-order-form__label btn" for="size-s">
+                  S
+                </label>
+              </div>
+              <div class="modal-order-form__input-container">
+                <input class="modal-order-form__radio" type="radio" name="size" value="m" id="size-m">
+                <label class="modal-order-form__label btn" for="size-m">
+                  M
+                </label>
+              </div>
+              <div class="modal-order-form__input-container">
+                <input class="modal-order-form__radio" type="radio" name="size" value="l" id="size-l">
+                <label class="modal-order-form__label btn" for="size-l">
+                  L
+                </label>
+              </div>
             </div>
           </div>
           <button class="modal-order-form__submit btn" type="submit">Добавить</button>
         </form>
       </div>
     </div>
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
 
