@@ -10,8 +10,8 @@
   }
   @media (min-width: 768px) {
     background-image: url("../img/hero-desktop@1x.jpg");
-    background-size: 1150px 746px;
     background-position: 50% 0;
+    background-size: 1150px 746px;
   }
   @media (min-width: 768px) and (min-resolution: 144dpi),
   (min-width: 768px) and (min-resolution: 1.5dppx) {
@@ -26,12 +26,11 @@
 
 .catalog-preview::after {
   display: none;
-
   @media @tablet-width {
     content: "";
     position: absolute;
-    left: 0;
     bottom: 0;
+    left: 0;
     z-index: 5;
 
     display: block;
@@ -41,9 +40,9 @@
     background: url("../img/bg-zigzag-fill.svg") 2px 0 repeat-x;
     background-size: contain;
   }
-   @media @desktop-width {
+  @media @desktop-width {
     height: 34px;
-   }
+  }
 }
 
 .catalog-preview__wrapper {
@@ -96,8 +95,13 @@
 }
 
 .catalog-preview__item {
+  position: relative;
+
   flex-grow: 1;
   width: 320px;
+  @media @desktop-width {
+    min-height: 130px;
+  }
 }
 
 .catalog-preview__link {
@@ -134,6 +138,11 @@
   }
   @media @desktop-width {
     padding-right: 320px;
+    &:hover {
+      position: absolute;
+      top: -5px;
+      bottom: 0;
+    }
   }
 }
 
