@@ -28,6 +28,8 @@
 }
 
 .production__title {
+  position: relative;
+
   margin: 0;
   margin-bottom: 25px;
   padding-right: 15px;
@@ -51,11 +53,19 @@
 
 .production__title-icon {
   position: absolute;
-  top: 33px;
+  top: 10px;
   left: 35px;
 
   transform: scale(1.4);
   fill: @color-3;
+  @media @tablet-width {
+    top: 0;
+    left: 8px;
+  }
+  @media @tablet-width {
+    top: 0;
+    left: 3px;
+  }
 }
 
 .production__desc {

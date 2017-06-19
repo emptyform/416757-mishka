@@ -73,7 +73,7 @@ function initMap() {
           center: {lat: 59.938892, lng: 30.323060}
         });
 
-        var image = 'img/icon-map-pin.svg';
+        var image = 'img/icon-map-pin.png';
         var AcademyMarker = new google.maps.Marker({
           position: {lat: 59.938892, lng: 30.323060},
           map: map,
