@@ -327,7 +327,7 @@
 
   background-color: @bg-color-1;
   border: none;
-  border-bottom: 2px solid transparent;
+  border-bottom: 2px solid @color-1;
   @media @tablet-width {
     display: block;
   }
@@ -336,7 +336,6 @@
 .custom-order-form__phone-number,
 .custom-order-form__email {
   @media @tablet-width {
-    // flex-grow: 1;
     margin: 0;
     padding-top: 18px;
     padding-left: 18px;
@@ -378,12 +377,11 @@
 
 .custom-order-form__name:focus,
 .custom-order-form__phone-number:focus,
-.custom-order-form__email:focus {
-  border-bottom: 2px solid @color-2;
-}
+.custom-order-form__email:focus,
 .custom-order-form__textarea:focus {
   border-color: @color-3;
 }
+
 .custom-order-form__note {
   margin: 0;
   margin-bottom: 25px;

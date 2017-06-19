@@ -56,7 +56,6 @@ FeaturedBuy.addEventListener("click", function (evt) {
 
 }
 
-
 if (CatalogBuy) {
 CatalogBuy.addEventListener("click", function (evt) {
     evt.preventDefault();
@@ -68,3 +67,16 @@ CatalogBuy.addEventListener("click", function (evt) {
 });
 }
 
+function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: {lat: 59.938892, lng: 30.323060}
+        });
+
+        var image = 'img/icon-map-pin.svg';
+        var AcademyMarker = new google.maps.Marker({
+          position: {lat: 59.938892, lng: 30.323060},
+          map: map,
+          icon: image
+        });
+}
