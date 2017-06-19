@@ -15,13 +15,15 @@
   &--content {
     padding: 21px 30px 55px 30px;
     @media @tablet-width {
-      padding: 5px 0 45px 0;
+      padding: 0 0 45px 0;
     }
     @media @desktop-width {
-      padding-top: 52px;
+      padding-top: 38px;
     }
   }
   &--title {
+    width: auto;
+
     background-color: @bg-color-2;
     @media @tablet-width {
       position: relative;
@@ -43,13 +45,13 @@
   .title-font();
   @media @tablet-width {
     width: 768px;
-    min-height: 227px;
+    min-height: 230px;
     margin: 0 auto;
-    padding-top: 92px;
     margin-bottom: 65px;
+    padding-top: 92px;
   }
   @media @desktop-width {
-    min-height: 257px;
+    min-height: 270px;
   }
 }
 
@@ -65,5 +67,27 @@
   }
   @media @desktop-width {
     width: 700px;
+  }
+}
+
+
+.custom-order__wrapper--title::after {
+  display: none;
+  @media @tablet-width {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+
+    display: block;
+    width: 100%;
+    height: 20px;
+
+    background: url("../img/bg-zigzag-fill.svg") 2px 0 repeat-x;
+    background-size: contain;
+  }
+  @media @desktop-width {
+    height: 34px;
   }
 }

@@ -19,18 +19,19 @@
     justify-content: space-between;
     align-items: center;
     width: 768px;
-    padding: 0 50px;
     min-height: 143px;
+    padding: 10px 50px 10px 50px;
   }
   @media @desktop-width {
-  width: 1150px;
-}
-
+    width: 1150px;
+  }
 }
 
 .page-footer__logo {
   display: none;
   @media @tablet-width {
+    // position: relative;
+    // bottom: 7px;
     display: block;
     width: 102px;
     height: 34px;
@@ -38,9 +39,24 @@
   }
 }
 
+.page-footer__logo-link:hover .page-footer__logo-link-icon {
+  fill: #46c1ae;
+}
+
+.page-footer__logo-link:active .page-footer__logo-link-icon {
+  fill: fade(#46c1ae, 50%);
+}
+
+.page-footer__logo-link-icon {
+  margin-left: 11px;
+
+  transform: scale(1.2);
+}
+
 .page-footer__socials {
   display: flex;
   min-height: 80px;
+
   border-bottom: 1px solid #e5e5e5;
   @media @tablet-width {
     border: none;
@@ -48,12 +64,27 @@
 }
 
 .page-footer__socials-links {
-  min-width: 142px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 142px;
   min-height: 30px;
   margin: auto;
+  padding-top: 10px;
+}
+
+.page-footer__socials-link:hover .page-footer__socials-link-icon {
+  fill: #46c1ae;
+}
+
+.page-footer__socials-link:active .page-footer__socials-link-icon {
+  fill: fade(#46c1ae, 50%);
 }
 
 .page-footer__copyright {
+  position: relative;
+
   min-height: 80px;
   margin: 0;
   padding: 25px 75px 15px 39px;
@@ -63,11 +94,39 @@
   line-height: @line-height-l;
   color: @color-1;
   @media @tablet-width {
-    padding: 25px 33px 15px 0;
     width: 183px;
+    padding: 25px 33px 15px 0;
+  }
+  @media @desktop-width {
+    // position: relative;
+    // bottom: 5px;
   }
 }
 
-.page-footer__copyright-link span {
-  .v-hidden();
+.page-footer__copyright-link {
+  position: absolute;
+  right: 65px;
+  @media @tablet-width {
+    top: 23px;
+    right: 25px;
+  }
 }
+
+.page-footer__copyright-link-icon {
+  position: absolute;
+
+  transform: scale(1.5);
+
+  fill: @bg-color-6;
+}
+
+.page-footer__copyright-link:hover .page-footer__copyright-link-icon {
+  fill: #46c1ae;
+}
+
+.page-footer__copyright-link:active .page-footer__copyright-link-icon {
+  fill: fade(#46c1ae, 50%);
+}
+// .page-footer__copyright-link span {
+//   .v-hidden();
+// }

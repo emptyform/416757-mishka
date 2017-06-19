@@ -4,11 +4,44 @@
   font-family: @font-family;
 
   background: @bg-color-4 url("../img/hero-mobile@1x.jpg") 50% -20px no-repeat;
-  background-color: @bg-color-4;
+  background-size: 575px 373px;
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+  }
+  @media (min-width: 768px) {
+    background-image: url("../img/hero-desktop@1x.jpg");
+    background-position: 50% 0;
+    background-size: 1150px 746px;
+  }
+  @media (min-width: 768px) and (min-resolution: 144dpi),
+  (min-width: 768px) and (min-resolution: 1.5dppx) {
+    background-image: url("../img/hero-desktop@2x.jpg");
+  }
   @media @tablet-width {
     position: relative;
-    margin-bottom: 47px;
 
+    margin-bottom: 32px;
+  }
+}
+
+.catalog-preview::after {
+  display: none;
+  @media @tablet-width {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+
+    display: block;
+    width: 100%;
+    height: 20px;
+
+    background: url("../img/bg-zigzag-fill.svg") 2px 0 repeat-x;
+    background-size: contain;
+  }
+  @media @desktop-width {
+    height: 34px;
   }
 }
 
@@ -62,25 +95,69 @@
 }
 
 .catalog-preview__item {
+  position: relative;
+
   flex-grow: 1;
   width: 320px;
-  min-height: 103px;
-  padding: 25px 150px 25px 30px;
-  &--interior {
-    background-color: #63d1bb;
-  }
-  &--toys {
-    background-color: #56c3b2;
-  }
-  @media @tablet-width {
-    min-height: 115px;
-    padding-left: 37px;
-  }
   @media @desktop-width {
-    padding-right: 320px;
+    min-height: 130px;
   }
 }
 
 .catalog-preview__link {
+  position: relative;
+
+  display: block;
+  min-height: 103px;
+  padding: 25px 150px 25px 30px;
+
   color: inherit;
+  &:hover .catalog-preview__link-icon {
+    fill-opacity: 0.7;
+  }
+  &:active .catalog-preview__link-icon {
+    fill-opacity: 0.3;
+  }
+  &--interior {
+    background-color: #63d1bb;
+    &:hover,
+    &:active {
+      background-color: #59d5bc;
+    }
+  }
+  &--toys {
+    background-color: #56c3b2;
+    &:hover,
+    &:active {
+      background-color: #46c1ae;
+    }
+  }
+  @media @tablet-width {
+    min-height: 130px;
+    padding-left: 37px;
+  }
+  @media @desktop-width {
+    padding-right: 320px;
+    &:hover,
+    &:active {
+      position: absolute;
+      top: -5px;
+      bottom: 0;
+    }
+  }
+}
+
+.catalog-preview__link-icon {
+  position: absolute;
+
+  fill: #149080;
+  fill-opacity: 0.5;
+  &--interior {
+    top: 22px;
+    right: 35px;
+  }
+  &--toys {
+    top: 20px;
+    right: 25px;
+  }
 }

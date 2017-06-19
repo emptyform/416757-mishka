@@ -26,6 +26,11 @@
   }
   @media @desktop-width {
     width: 1150px;
+    &--name,
+    &--phone,
+    &--email {
+      padding-right: 225px;
+    }
   }
 }
 
@@ -65,6 +70,8 @@
 .custom-order-form__container {
   @media @tablet-width {
     display: flex;
+    flex-grow: 1;
+    width: 100%;
     min-height: 55px;
   }
 }
@@ -127,6 +134,8 @@
 }
 
 .custom-order-form__label {
+  position: relative;
+
   display: block;
 
   font-weight: 700;
@@ -150,6 +159,7 @@
 }
 
 .custom-order-form__label {
+  cursor: pointer;
   @media @tablet-width {
     min-height: 76px;
     padding-top: 15px;
@@ -174,6 +184,101 @@
   }
 }
 
+.custom-order-form__label--type::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 39px;
+  height: 39px;
+
+  background-color: transparent;
+  border: 2px solid @color-2;
+  border-radius: 50%;
+  @media @tablet-width {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.custom-order-form__label--type::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 13px;
+
+  display: none;
+  width: 12px;
+  height: 12px;
+
+  background-color: #62d1ba;
+  border-radius: 50%;
+  @media @tablet-width {
+    top: 16px;
+    left: 16px;
+
+    width: 21px;
+    height: 21px;
+  }
+}
+
+.custom-order-form__label--color::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: transparent;
+  border: 2px solid @color-2;
+  @media @tablet-width {
+    top: 0;
+    left: 1px;
+
+    width: 54px;
+    height: 52px;
+  }
+}
+
+.custom-order-form__label--color::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 10px;
+
+  display: none;
+  width: 22px;
+  height: 16px;
+
+  background: transparent url("../img/icon-tick.svg") 0 0 no-repeat;
+  background-size: cover;
+  @media @tablet-width {
+    top: 16px;
+    left: 13px;
+
+    width: 33px;
+    height: 22px;
+  }
+}
+
+.custom-order-form__radio:checked ~ .custom-order-form__label--type::after,
+.custom-order-form__checkbox:checked ~ .custom-order-form__label--color::after {
+  display: block;
+}
+
+.custom-order-form__label--type:hover::before,
+.custom-order-form__label--color:hover::before {
+  border-color: @color-3;
+}
+
+.custom-order-form__label--type:active::before,
+.custom-order-form__label--color:active::before {
+  border-color: fade(@color-2, 20%);
+}
+
 .custom-order-form ::-webkit-input-placeholder {
   font-weight: 400;
   font-size: @font-size-m;
@@ -185,28 +290,49 @@
   }
 }
 
+.custom-order-form__input-container {
+  position: relative;
+
+  flex-grow: 1;
+}
+
+.custom-order-form__input-icon {
+  position: absolute;
+  top: 10px;
+  right: 7px;
+
+  fill: fade(@color-1, 20%);
+  &--email {
+    top: 12px;
+
+    transform: scale(1.4);
+  }
+}
+
+.custom-order-form__email:focus ~ .custom-order-form__input-icon,
+.custom-order-form__phone-number:focus ~ .custom-order-form__input-icon {
+  fill: @color-3;
+}
+
 
 .custom-order-form__name,
 .custom-order-form__phone-number,
 .custom-order-form__email {
   width: 100%;
   margin-bottom: 25px;
-  padding: 16px 10px 16px 0;
+  padding: 16px 40px 16px 18px;
 
   background-color: @bg-color-1;
   border: none;
+  border-bottom: 2px solid @color-1;
   @media @tablet-width {
-    width: 320px;
-  }
-  @media @desktop-width {
-    width: 600px;
+    display: block;
   }
 }
 
 .custom-order-form__phone-number,
 .custom-order-form__email {
   @media @tablet-width {
-    flex-grow: 1;
     margin: 0;
     padding-top: 18px;
     padding-left: 18px;
@@ -214,9 +340,6 @@
     background-color: transparent;
   }
 }
-
-
-
 
 .custom-order-form__textarea {
   width: 100%;
@@ -231,6 +354,29 @@
   @media @desktop-width {
     width: 700px;
   }
+}
+
+.custom-order-form__name,
+.custom-order-form__phone-number,
+.custom-order-form__email,
+.custom-order-form__textarea {
+  font-weight: 400;
+  font-size: @font-size-m;
+  line-height: @line-height-s;
+  color: @color-2;
+
+  outline: none;
+  @media @tablet-width {
+    font-size: 19px;
+    line-height: 19px;
+  }
+}
+
+.custom-order-form__name:focus,
+.custom-order-form__phone-number:focus,
+.custom-order-form__email:focus,
+.custom-order-form__textarea:focus {
+  border-color: @color-3;
 }
 
 .custom-order-form__note {
@@ -251,10 +397,11 @@
 }
 
 .custom-order__submit-btn {
+  background-color: @bg-color-1;
   @media @tablet-width {
     width: 229px;
     margin: 0;
-    margin-top: 30px;
+    margin-top: 25px;
   }
 }
 

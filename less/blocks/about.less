@@ -52,6 +52,8 @@
 }
 
 .about__item {
+  position: relative;
+
   min-height: 95px;
   margin-bottom: 23px;
   padding-top: 60px;
@@ -82,5 +84,23 @@
   }
   @media @desktop-width {
     width: 350px;
+  }
+}
+
+.about__item-icon {
+  position: absolute;
+  top: 0;
+  left: 4px;
+
+  fill: #63d2bc;
+  &--madein {
+    transform: scale(1.6);
+  }
+  &--style {
+    transform: scale(1.4);
+  }
+  @media @tablet-width {
+    top: 15px;
+    left: 10px;
   }
 }

@@ -13,10 +13,13 @@
     width: auto;
   }
   &--title {
+    width: auto;
+
     background-color: @bg-color-2;
     @media @tablet-width {
       position: relative;
-      margin-bottom: 65px;
+
+      margin-bottom: 53px;
     }
   }
   &--content {
@@ -34,6 +37,8 @@
 }
 
 .catalog__title {
+  position: relative;
+
   min-height: 177px;
   margin: 0 auto;
   padding: 70px 40px 10px 40px;
@@ -43,12 +48,33 @@
   .title-font();
   @media @tablet-width {
     width: 768px;
-    min-height: 220px;
+    min-height: 230px;
     padding-top: 95px;
   }
   @media @desktop-width {
     width: 1150px;
-    min-height: 255px;
+    min-height: 270px;
+  }
+}
+
+.catalog__wrapper--title::after {
+  display: none;
+  @media @tablet-width {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+
+    display: block;
+    width: 100%;
+    height: 20px;
+
+    background: url("../img/bg-zigzag-fill.svg") 2px 0 repeat-x;
+    background-size: contain;
+  }
+  @media @desktop-width {
+    height: 34px;
   }
 }
 
@@ -58,6 +84,5 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 5px;
   }
 }

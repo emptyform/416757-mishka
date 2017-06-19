@@ -22,6 +22,7 @@
 .catalog-item__container {
   min-height: 179px;
   padding: 25px 28px 0 28px;
+
   border: 1px solid #eeeeee;
   @media @tablet-width {
     display: flex;
@@ -31,9 +32,17 @@
   @media @desktop-width {
     min-height: 197px;
   }
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .catalog-item__title {
+  position: relative;
+
   margin: 0;
   margin-bottom: 5px;
 
@@ -52,7 +61,6 @@
   height: 195px;
   img {
     display: block;
-
   }
   @media @tablet-width {
     flex-shrink: 0;
@@ -81,8 +89,11 @@
 }
 
 .catalog-item__buy {
+  position: relative;
+
   min-height: 70px;
   padding: 20px 30px 25px 0;
+
   border-top: 1px solid #eeeeee;
   @media @tablet-width {
     padding-top: 23px;
@@ -109,5 +120,27 @@
 }
 
 .catalog-item__buy-btn {
-  .v-hidden(); /* Временно */
+  position: absolute;
+  top: 21px;
+  right: 0;
+  // .v-hidden(); /* Временно */
+
+  background: transparent;
+  border: none;
+  &:hover .catalog-item__buy-btn-icon {
+    fill: @color-3;
+  }
+  &:active .catalog-item__buy-btn-icon {
+    fill: fade(@color-3, 50%);
+  }
+}
+
+
+
+.catalog-item__buy-btn-icon {
+  fill: fade(@color-1, 20%);
+}
+
+.catalog-item__buy-btn span {
+  .v-hidden();
 }
