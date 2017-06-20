@@ -20,6 +20,9 @@
     margin: 0 auto;
     padding: 50px 50px 25px 50px;
     &--email {
+      padding-bottom: 20px;
+    }
+    &--email {
       padding-top: 0;
       padding-bottom: 50px;
     }
@@ -178,7 +181,7 @@
 
 .custom-order-form__label--name {
   @media @tablet-width {
-    margin-right: 40px;
+    margin-right: 27px;
     padding: 0;
     padding-top: 17px;
   }
@@ -253,7 +256,7 @@
   width: 22px;
   height: 16px;
 
-  background: transparent url("../img/icon-tick.svg") 0 0 no-repeat;
+  background: transparent url("../img/icons/icon-tick.svg") 0 0 no-repeat;
   background-size: cover;
   @media @tablet-width {
     top: 16px;
@@ -298,14 +301,29 @@
 
 .custom-order-form__input-icon {
   position: absolute;
-  top: 10px;
-  right: 7px;
 
   fill: fade(@color-1, 20%);
+  &--phone {
+    top: 11px;
+    right: 7px;
+  }
   &--email {
-    top: 12px;
+    top: 18px;
+    right: 3px;
 
     transform: scale(1.4);
+  }
+  @media @tablet-width {
+    top: 16px;
+    right: 21px;
+  }
+  @media @desktop-width {
+    &--email {
+      right: 5px;
+    }
+    &--phone {
+      right: 10px;
+    }
   }
 }
 
@@ -319,14 +337,16 @@
 .custom-order-form__phone-number,
 .custom-order-form__email {
   width: 100%;
-  margin-bottom: 25px;
-  padding: 16px 40px 16px 18px;
+  margin-bottom: 21px;
+  padding: 16px 40px 16px 0;
 
-  background-color: @bg-color-1;
+  background-color: transparent;
   border: none;
   border-bottom: 2px solid @color-1;
   @media @tablet-width {
     display: block;
+    margin-bottom: 20px;
+    padding: 15px 40px 15px 15px;
   }
 }
 
@@ -334,10 +354,6 @@
 .custom-order-form__email {
   @media @tablet-width {
     margin: 0;
-    padding-top: 18px;
-    padding-left: 18px;
-
-    background-color: transparent;
   }
 }
 
@@ -391,7 +407,7 @@
   .paragraph-font--small();
   @media @tablet-width {
     float: right;
-    margin-top: 37px;
+    margin-top: 32px;
     margin-bottom: 0;
   }
 }
@@ -401,7 +417,10 @@
   @media @tablet-width {
     width: 229px;
     margin: 0;
-    margin-top: 25px;
+    margin-top: 22px;
+  }
+  @media @desktop-width {
+    margin-top: 17px;
   }
 }
 
