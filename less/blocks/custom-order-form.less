@@ -145,10 +145,17 @@
   font-size: @font-size-m;
   line-height: @line-height-s;
   color: @color-1;
+
+  cursor: pointer;
   &--type,
   &--color {
+    overflow-x: hidden;
     min-height: 61px;
     padding: 10px 15px 5px 61px;
+    @media @tablet-width {
+      word-break: break-all;
+      overflow-x: visible;
+    }
   }
   &--type {
     @media @tablet-width {
@@ -156,19 +163,15 @@
     }
   }
   @media @tablet-width {
+    min-height: 76px;
+    padding-top: 15px;
+    padding-left: 82px;
+
     font-size: 19px;
     line-height: 19px;
   }
 }
 
-.custom-order-form__label {
-  cursor: pointer;
-  @media @tablet-width {
-    min-height: 76px;
-    padding-top: 15px;
-    padding-left: 82px;
-  }
-}
 
 .custom-order-form__label--color {
   @media @tablet-width {
@@ -272,6 +275,11 @@
   display: block;
 }
 
+.custom-order-form__radio:checked ~ .custom-order-form__label--type:active::after,
+.custom-order-form__checkbox:checked ~ .custom-order-form__label--color:active::after {
+  display: none;
+}
+
 .custom-order-form__label--type:hover::before,
 .custom-order-form__label--color:hover::before {
   border-color: @color-3;
@@ -282,7 +290,8 @@
   border-color: fade(@color-2, 20%);
 }
 
-.custom-order-form ::-webkit-input-placeholder {
+.custom-order-form input::placeholder,
+.custom-order-form textarea::placeholder {
   font-weight: 400;
   font-size: @font-size-m;
   line-height: @line-height-s;
