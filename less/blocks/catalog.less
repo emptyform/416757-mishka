@@ -39,22 +39,24 @@
 .catalog__title {
   position: relative;
 
+  width: 260px;
   min-height: 177px;
   margin: 0 auto;
-  padding: 70px 40px 10px 40px;
+  padding: 70px 0 50px 0;
 
   text-align: center;
 
   .title-font();
   @media @tablet-width {
+    padding-left: 40px;
+    padding-right: 40px;
     width: 768px;
     min-height: 230px;
     padding-top: 95px;
   }
   @media @desktop-width {
     width: 1150px;
-    min-height: 270px;
-  }
+    min-height: 270px;  }
 }
 
 .catalog__wrapper--title::after {
