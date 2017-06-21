@@ -21,13 +21,14 @@
 
 .catalog-item__container {
   min-height: 179px;
-  padding: 25px 28px 0 28px;
+  padding: 25px 25px 0 28px;
 
   border: 1px solid #eeeeee;
   @media @tablet-width {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
+    padding-right: 30px;
   }
   @media @desktop-width {
     min-height: 197px;
@@ -101,6 +102,7 @@
   }
   @media @desktop-width {
     padding-top: 25px;
+    padding-bottom: 28px;
     padding-left: 0;
   }
 }
@@ -123,10 +125,12 @@
   position: absolute;
   top: 21px;
   right: 0;
-  // .v-hidden(); /* Временно */
 
   background: transparent;
   border: none;
+  @media @desktop-width {
+    top: 25px;
+  }
   &:hover .catalog-item__buy-btn-icon {
     fill: @color-3;
   }

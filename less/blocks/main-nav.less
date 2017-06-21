@@ -21,11 +21,7 @@
   }
 }
 
-.main-nav--no-js {
-  @media @mobile-only-width {
-    height: auto;
-  }
-}
+
 
 .main-nav--opened .main-nav__item {
   @media @mobile-only-width {
@@ -102,6 +98,16 @@
   &--opened {
     display: block;
   }
+}
+
+.main-nav--no-js {
+  @media @mobile-only-width {
+    height: auto;
+  }
+}
+
+.main-nav--no-js .main-nav__toggler {
+  display: none;
 }
 
 .main-nav__list {

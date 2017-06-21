@@ -57,12 +57,13 @@
   left: 35px;
 
   transform: scale(1.4);
+
   fill: @color-3;
   @media @tablet-width {
     top: 0;
     left: 8px;
   }
-  @media @tablet-width {
+  @media @desktop-width {
     top: 0;
     left: 3px;
   }
@@ -91,6 +92,7 @@
   width: 260px;
   height: 150px;
   margin-bottom: 27px;
+
   cursor: pointer;
   @media @tablet-width {
     order: -1;
@@ -111,6 +113,7 @@
   }
   &:active .production__img-icon {
     transform: translate(-50%,-50%) scale(0.8);
+
     fill-opacity: 0.3;
   }
 }

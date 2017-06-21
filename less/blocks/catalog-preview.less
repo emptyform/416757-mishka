@@ -8,19 +8,21 @@
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url("../img/hero-mobile@2x.jpg");
   }
-  @media (min-width: 768px) {
-    background-image: url("../img/hero-desktop@1x.jpg");
-    background-position: 50% 0;
-    background-size: 1150px 746px;
-  }
-  @media (min-width: 768px) and (min-resolution: 144dpi),
-  (min-width: 768px) and (min-resolution: 1.5dppx) {
-    background-image: url("../img/hero-desktop@2x.jpg");
-  }
   @media @tablet-width {
     position: relative;
 
     margin-bottom: 32px;
+
+    background-image: url("../img/hero-desktop@1x.jpg");
+    background-position: 50% 0;
+    background-size: 1150px 746px;
+  }
+  @media @tablet-width and (min-resolution: 144dpi),
+  @tablet-width and (min-resolution: 1.5dppx) {
+    background-image: url("../img/hero-desktop@2x.jpg");
+  }
+  @media @desktop-width {
+    background-size: 1250px 746px;
   }
 }
 
@@ -37,7 +39,9 @@
     width: 100%;
     height: 20px;
 
-    background: url("../img/bg-zigzag-fill.svg") 2px 0 repeat-x;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-position: 2px 0;
     background-size: contain;
   }
   @media @desktop-width {
@@ -47,7 +51,7 @@
 
 .catalog-preview__wrapper {
   width: 320px;
-  min-height: 488px; /* для сетки */
+  min-height: 488px;
   margin: 0 auto;
   padding: 0;
   @media @tablet-width {
@@ -159,5 +163,14 @@
   &--toys {
     top: 20px;
     right: 25px;
+  }
+  @media @tablet-width {
+    &--interior {
+      top: 27px;
+    }
+    &--toys {
+      top: 30px;
+      right: 32px;
+    }
   }
 }
