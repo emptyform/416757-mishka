@@ -2,6 +2,11 @@ var MainNav = document.querySelector(".main-nav");
 var MainNavToggler = document.querySelector(".main-nav__toggler");
 
 MainNav.classList.remove("main-nav--no-js");
+console.log("remove no-js");
+MainNav.classList.remove("main-nav--opened");
+console.log("remove opened");
+MainNav.classList.add("main-nav--closed");
+console.log("add closed");
 
 MainNavToggler.addEventListener("click", function (evt) {
     evt.preventDefault();
